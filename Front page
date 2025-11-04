@@ -4,13 +4,13 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>XUQI - 个人网站</title>
-  <meta name="description" content="你的名字的个人网站，包含简介、项目与联系方式。" />
+  <meta name="description" content="XUQI字的个人网站，包含简介、项目与联系方式。" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="site-header">
     <div class="container">
-      <h1 class="site-title">你的名字</h1>
+      <h1 class="site-title">XUQI</h1>
       <nav class="site-nav">
         <a href="#about">关于</a>
         <a href="#projects">项目</a>
@@ -21,7 +21,7 @@
 
   <main class="container">
     <section id="hero" class="hero">
-      <h2>你好，我是 你的名字</h2>
+      <h2>你好，我是 XUQI</h2>
       <p>职业 / 学习方向 · 城市 · 简短自我介绍</p>
       <p class="cta">
         <a class="btn" href="#projects">查看项目</a>
@@ -55,7 +55,7 @@
 
   <footer class="site-footer">
     <div class="container">
-      <p>© <span id="year"></span> 你的名字 • 基于 GitHub Pages</p>
+      <p>© <span id="year"></span> XUQI • 基于 GitHub Pages</p>
     </div>
   </footer>
 
