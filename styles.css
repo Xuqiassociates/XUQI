@@ -1,174 +1,40 @@
-/* ---------------------------------------------
-   XUQI Associates Website Styles (English)
-   Theme: White → Beige gradient background
-   Buttons: Beige / Warm tones
----------------------------------------------- */
-
-:root {
-  --bg: linear-gradient(180deg, #ffffff 0%, #fff8e1 100%); /* background: white → beige gradient */
-  --card: #f7f7f7;       /* card background */
-  --text: #0f1720;       /* main text color */
-  --muted: #6b7280;      /* secondary text */
-  --accent: #f5deb3;     /* button color: warm beige */
-  --accent-hover: #e6c79c; /* button hover color */
-  --radius: 10px;
-  --container-width: 900px;
-  --transition: 0.3s ease;
+:root{
+  --bg:#fff; /* 主背景白色 */
+  --card:#fdf6e3; /* 卡片米色 */
+  --text:#0f1720;
+  --muted:#6b7280;
+  --accent:#c49b6e; /* 按钮/链接米色系 */
+  --radius:10px;
+  --container-width:900px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
 }
 
-/* Reset & base */
-* { box-sizing: border-box; }
-html, body {
-  height: 100%;
-  margin: 0;
-  background: var(--bg);
-  color: var(--text);
-  -webkit-font-smoothing: antialiased;
-  line-height: 1.6;
-}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased}
+.container{max-width:var(--container-width);margin:0 auto;padding:24px}
 
-.container { max-width: var(--container-width); margin: 0 auto; padding: 24px; }
+.site-header{background:linear-gradient(90deg, rgba(196,155,110,0.06), transparent);border-bottom:1px solid rgba(15,23,32,0.04)}
+.site-title{margin:8px 0;font-size:20px}
+.site-nav a{margin-left:12px;color:var(--accent);text-decoration:none;font-weight:500}
 
-/* Header */
-.site-header {
-  background: linear-gradient(90deg, rgba(0,0,0,0.03), transparent);
-  border-bottom: 1px solid rgba(15,23,32,0.04);
-  padding: 12px 0;
-}
+.hero{padding:40px 0;text-align:center}
+.hero h2{margin:0 0 8px;font-size:28px}
+.hero p{margin:0 0 14px;color:var(--muted)}
+.hero-logo{max-width:120px;margin-bottom:16px}
 
-.header-left {
-  display: flex;
-  align-items: center;
-}
+.btn{display:inline-block;padding:10px 16px;background:var(--accent);color:#fff;border-radius:8px;text-decoration:none}
+.btn.outline{background:transparent;color:var(--accent);border:1px solid rgba(196,155,110,0.3)}
 
-.logo { height: 50px; margin-right: 12px; }
+.card{background:var(--card);border-radius:var(--radius);padding:18px;margin:18px 0;box-shadow:0 4px 18px rgba(16,24,40,0.04)}
+.projects-list{list-style:none;padding-left:0;margin:0}
+.projects-list li{padding:10px 0;border-top:1px dashed rgba(15,23,32,0.03)}
+.projects-list li:first-child{border-top:0}
 
-.site-title {
-  font-size: 22px;
-  font-weight: 600;
-}
+.site-footer{padding:14px 0;color:var(--muted);font-size:13px;text-align:center;margin-top:28px}
 
-.site-nav a {
-  margin-left: 16px;
-  color: var(--text);
-  text-decoration: none;
-  font-weight: 500;
-  transition: color var(--transition);
-}
-
-.site-nav a:hover,
-.site-nav a:focus { color: var(--muted); }
-
-/* Hero section */
-.hero {
-  padding: 60px 0;
-  text-align: center;
-}
-
-.hero-logo {
-  height: 100px;
-  margin-bottom: 20px;
-  opacity: 0;
-  transform: translateY(-20px);
-  animation: fadeInDown 1s forwards;
-}
-
-@keyframes fadeInDown {
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.hero h2 {
-  margin: 0 0 12px;
-  font-size: 32px;
-}
-
-.hero p {
-  margin: 0 0 18px;
-  color: var(--muted);
-  font-size: 16px;
-}
-
-/* Buttons */
-.btn {
-  display: inline-block;
-  padding: 12px 20px;
-  background: var(--accent);
-  color: #0f1720;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 500;
-  transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
-}
-
-.btn:hover,
-.btn:focus {
-  background: var(--accent-hover);
-  transform: translateY(-2px) scale(1.05);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-.btn.outline {
-  background: transparent;
-  color: var(--accent);
-  border: 1px solid rgba(0,0,0,0.1);
-}
-
-.btn.outline:hover,
-.btn.outline:focus {
-  background: var(--accent);
-  color: #0f1720;
-  border-color: var(--accent-hover);
-  transform: translateY(-2px) scale(1.05);
-}
-
-/* Cards */
-.card {
-  background: var(--card);
-  border-radius: var(--radius);
-  padding: 24px;
-  margin: 24px 0;
-  box-shadow: 0 6px 18px rgba(16,24,40,0.06);
-  transition: box-shadow var(--transition), transform var(--transition);
-}
-
-.card:hover {
-  box-shadow: 0 14px 28px rgba(16,24,40,0.12);
-  transform: translateY(-5px);
-}
-
-/* Project list */
-.projects-list {
-  list-style: none;
-  padding-left: 0;
-  margin: 0;
-}
-
-.projects-list li {
-  padding: 12px 0;
-  border-top: 1px dashed rgba(15,23,32,0.05);
-  transition: background var(--transition);
-}
-
-.projects-list li:first-child { border-top: 0; }
-
-.projects-list li:hover { background: rgba(245,222,179,0.2); }
-
-/* Footer */
-.site-footer {
-  padding: 16px 0;
-  color: var(--muted);
-  font-size: 13px;
-  text-align: center;
-  margin-top: 32px;
-}
-
-/* Responsive */
-@media (max-width: 600px) {
-  .site-nav { display: block; margin-top: 8px; }
-  .site-nav a { display: inline-block; margin: 6px 8px 0 0; }
-  .hero h2 { font-size: 24px; }
-  .hero p { font-size: 14px; }
-  .btn { padding: 10px 16px; }
-  .container { padding: 16px; }
+/* 响应式 */
+@media (max-width:600px){
+  .site-nav{display:block;margin-top:8px}
+  .site-nav a{display:inline-block;margin:6px 8px 0 0}
+  .hero h2{font-size:22px}
 }
