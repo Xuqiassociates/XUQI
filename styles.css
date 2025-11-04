@@ -1,10 +1,10 @@
 :root {
-  --bg: linear-gradient(180deg, #ffffff 0%, #fff8e1 100%);
-  --card: #ffffff;
-  --text: #0f1720;
-  --muted: #6b7280;
-  --accent: #2563eb;
-  --accent-hover: #1e4bb8;
+  --bg: linear-gradient(180deg, #ffffff 0%, #fff8e1 100%); /* 主背景：白→米白渐变 */
+  --card: #f7f7f7;       /* 卡片 / 内容区背景 */
+  --text: #0f1720;       /* 正文和标题文字颜色 */
+  --muted: #6b7280;      /* 次要文字颜色 */
+  --accent: #2563eb;     /* 按钮 / 链接 / 强调色 */
+  --accent-hover: #1e4bb8; /* hover 强调色 */
   --radius: 10px;
   --container-width: 900px;
   --transition: 0.3s ease;
@@ -117,3 +117,43 @@ html, body{
   border-radius:var(--radius);
   padding:24px;
   margin:24px 0;
+  box-shadow:0 6px 18px rgba(16,24,40,0.06);
+  transition:box-shadow var(--transition), transform var(--transition);
+}
+.card:hover{
+  box-shadow:0 14px 28px rgba(16,24,40,0.12);
+  transform:translateY(-5px);
+}
+
+/* 项目列表 */
+.projects-list{
+  list-style:none;
+  padding-left:0;
+  margin:0;
+}
+.projects-list li{
+  padding:12px 0;
+  border-top:1px dashed rgba(15,23,32,0.05);
+  transition:background var(--transition);
+}
+.projects-list li:first-child{ border-top:0; }
+.projects-list li:hover{ background: rgba(37,99,235,0.03); }
+
+/* Footer */
+.site-footer{
+  padding:16px 0;
+  color:var(--muted);
+  font-size:13px;
+  text-align:center;
+  margin-top:32px;
+}
+
+/* 响应式 */
+@media (max-width:600px){
+  .site-nav{display:block;margin-top:8px}
+  .site-nav a{display:inline-block;margin:6px 8px 0 0}
+  .hero h2{font-size:24px}
+  .hero p{font-size:14px}
+  .btn{padding:10px 16px}
+  .container{padding:16px}
+}
