@@ -1,5 +1,5 @@
 :root {
-  --bg: linear-gradient(180deg, #ffffff 0%, #fdf6e3 100%);
+  --bg: linear-gradient(180deg, #ffffff 0%, #fff8e1 100%);
   --card: #ffffff;
   --text: #0f1720;
   --muted: #6b7280;
@@ -10,6 +10,9 @@
   --transition: 0.3s ease;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
 }
+
+/* 平滑滚动 */
+html { scroll-behavior: smooth; }
 
 /* 全局 */
 *{box-sizing:border-box}
@@ -61,6 +64,12 @@ html, body{
 .hero-logo{
   height:100px;
   margin-bottom:20px;
+  opacity:0;
+  transform: translateY(-20px);
+  animation: fadeInDown 1s forwards;
+}
+@keyframes fadeInDown {
+  to { opacity:1; transform:translateY(0); }
 }
 .hero h2{
   margin:0 0 12px;
@@ -81,12 +90,13 @@ html, body{
   border-radius:8px;
   text-decoration:none;
   font-weight:500;
-  transition: background var(--transition), transform var(--transition);
+  transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
 }
 .btn:hover,
 .btn:focus{
-  background:var(--accent-hover);
-  transform:translateY(-2px);
+  background: var(--accent-hover);
+  transform: translateY(-2px) scale(1.05);
+  box-shadow:0 4px 12px rgba(0,0,0,0.1);
 }
 .btn.outline{
   background:transparent;
@@ -98,7 +108,7 @@ html, body{
   background:var(--accent);
   color:#fff;
   border-color:var(--accent-hover);
-  transform:translateY(-2px);
+  transform:translateY(-2px) scale(1.05);
 }
 
 /* 卡片 */
@@ -107,47 +117,3 @@ html, body{
   border-radius:var(--radius);
   padding:24px;
   margin:24px 0;
-  box-shadow:0 6px 18px rgba(16,24,40,0.06);
-  transition:box-shadow var(--transition), transform var(--transition);
-}
-.card:hover{
-  box-shadow:0 12px 24px rgba(16,24,40,0.1);
-  transform:translateY(-3px);
-}
-
-/* 项目列表 */
-.projects-list{
-  list-style:none;
-  padding-left:0;
-  margin:0;
-}
-.projects-list li{
-  padding:12px 0;
-  border-top:1px dashed rgba(15,23,32,0.05);
-  transition:background var(--transition);
-}
-.projects-list li:first-child{
-  border-top:0;
-}
-.projects-list li:hover{
-  background: rgba(37,99,235,0.03);
-}
-
-/* Footer */
-.site-footer{
-  padding:16px 0;
-  color:var(--muted);
-  font-size:13px;
-  text-align:center;
-  margin-top:32px;
-}
-
-/* 响应式 */
-@media (max-width:600px){
-  .site-nav{display:block;margin-top:8px}
-  .site-nav a{display:inline-block;margin:6px 8px 0 0}
-  .hero h2{font-size:24px}
-  .hero p{font-size:14px}
-  .btn{padding:10px 16px}
-  .container{padding:16px}
-}
