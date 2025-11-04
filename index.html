@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>你的名字 - 个人网站</title>
+  <meta name="description" content="你的名字的个人网站，包含简介、项目与联系方式。" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="site-title">你的名字</h1>
+      <nav class="site-nav">
+        <a href="#about">关于</a>
+        <a href="#projects">项目</a>
+        <a href="#contact">联系</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="hero" class="hero">
+      <h2>你好，我是 你的名字</h2>
+      <p>职业 / 学习方向 · 城市 · 简短自我介绍</p>
+      <p class="cta">
+        <a class="btn" href="#projects">查看项目</a>
+        <a class="btn outline" href="#contact">联系我</a>
+      </p>
+    </section>
+
+    <section id="about" class="card">
+      <h3>关于我</h3>
+      <p>在这里写一段更详细的介绍：背景、技术栈、兴趣等。可以放一张头像（通过 &lt;img&gt;）或链接到 about.md。</p>
+    </section>
+
+    <section id="projects" class="card">
+      <h3>最近的项目</h3>
+      <ul class="projects-list">
+        <li>
+          <strong>项目名称 A</strong> — 简短描述。 <a href="#">查看详情</a>
+        </li>
+        <li>
+          <strong>项目名称 B</strong> — 简短描述。 <a href="#">查看详情</a>
+        </li>
+      </ul>
+    </section>
+
+    <section id="contact" class="card">
+      <h3>联系我</h3>
+      <p>邮箱：<a href="mailto:you@example.com">you@example.com</a></p>
+      <p>更多：<a href="https://github.com/Xuqiassociates" target="_blank" rel="noopener">GitHub</a> · <a href="#" target="_blank" rel="noopener">LinkedIn</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> 你的名字 • 基于 GitHub Pages</p>
+    </div>
+  </footer>
+
+  <script>
+    // 设置当前年份
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
