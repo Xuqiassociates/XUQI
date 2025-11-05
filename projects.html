@@ -1,64 +1,61 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Our Projects - XUQI Associates</title>
-  <meta name="description" content="XUQI Associates Projects page" />
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Projects | XUQI Associates</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-  <!-- Header -->
-  <header class="site-header">
-    <div class="container header-left">
-      <img src="assets/logo.png" alt="XUQI Associates Logo" class="logo">
-      <h1 class="site-title">XUQI Associates</h1>
-      <nav class="site-nav">
-        <a href="index.html#about">About</a>
-        <a href="projects.html">Projects</a>
-        <a href="index.html#contact">Contact</a>
-      </nav>
-    </div>
+  <header>
+    <div class="logo">XUQI Associates</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="projects.html" class="active">Projects</a>
+      <a href="mailto:xuqiassociates@outlook.com">Contact</a>
+    </nav>
   </header>
 
-  <!-- Projects Section -->
-  <main class="container">
-    <section id="projects" class="card">
-      <h3>Our Projects</h3>
-      <ul class="projects-list">
-        <li>
-          <strong>Riverside Residential Extension – Cambridge</strong><br>
-          Complete structural design and assessment for a two-storey extension to a Victorian townhouse. Delivered safe load-bearing solutions while preserving the character of the original building.
-        </li>
-        <li>
-          <strong>Modern Office Fit-Out – Cambridge Business Park</strong><br>
-          Structural survey and reinforcement design for an open-plan office renovation. Optimized floor load capacities and ensured compliance with current building regulations.
-        </li>
-        <li>
-          <strong>Heritage Building Refurbishment – Central Cambridge</strong><br>
-          Assessment and strengthening of a Grade II listed building. Implemented minimal intervention techniques to maintain historical features while improving structural integrity.
-        </li>
-        <li>
-          <strong>Loft Conversion – Suburban Cambridge</strong><br>
-          Structural calculations and support design for a loft conversion. Maximized usable space while ensuring full compliance with Building Control.
-        </li>
-        <li>
-          <strong>Sustainable New Build – Cambridge Outskirts</strong><br>
-          Full structural design for a low-carbon, energy-efficient home. Integrated steel and timber solutions to reduce environmental impact without compromising safety.
-        </li>
-      </ul>
-    </section>
-  </main>
+  <section class="projects-hero">
+    <h1>Our Projects</h1>
+    <p>Explore our recent structural engineering work across Cambridge and beyond.</p>
+  </section>
 
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container">
-      <p>© <span id="year"></span> XUQI Associates • Powered by GitHub Pages</p>
+  <section class="projects-gallery">
+    <div class="project-item">
+      <img src="images/project1.jpg" alt="Riverside Residential Extension" />
+      <h3>Riverside Residential Extension – Cambridge</h3>
+      <p>Complete structural design and assessment for a two-storey extension to a Victorian townhouse. Delivered safe load-bearing solutions while preserving the character of the original building.</p>
     </div>
-  </footer>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+    <div class="project-item">
+      <img src="images/project2.jpg" alt="Modern Office Fit-Out" />
+      <h3>Modern Office Fit-Out – Cambridge Business Park</h3>
+      <p>Structural survey and reinforcement design for an open-plan office renovation. Optimized floor load capacities and ensured compliance with current building regulations.</p>
+    </div>
+
+    <div class="project-item">
+      <img src="images/project3.jpg" alt="Heritage Building Refurbishment" />
+      <h3>Heritage Building Refurbishment – Central Cambridge</h3>
+      <p>Assessment and strengthening of a Grade II listed building. Implemented minimal intervention techniques to maintain historical features while improving structural integrity.</p>
+    </div>
+
+    <div class="project-item">
+      <img src="images/project4.jpg" alt="Loft Conversion" />
+      <h3>Loft Conversion – Suburban Cambridge</h3>
+      <p>Structural calculations and support design for a loft conversion. Maximized usable space while ensuring full compliance with Building Control.</p>
+    </div>
+
+    <div class="project-item">
+      <img src="images/project5.jpg" alt="Sustainable New Build" />
+      <h3>Sustainable New Build – Cambridge Outskirts</h3>
+      <p>Full structural design for a low-carbon, energy-efficient home. Integrated steel and timber solutions to reduce environmental impact without compromising safety.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 XUQI Associates | xuqiassociates@outlook.com</p>
+  </footer>
 </body>
 </html>
