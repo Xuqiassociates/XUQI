@@ -1,40 +1,110 @@
-:root{
-  --bg:#fff; /* 主背景白色 */
-  --card:#fdf6e3; /* 卡片米色 */
-  --text:#0f1720;
-  --muted:#6b7280;
-  --accent:#c49b6e; /* 按钮/链接米色系 */
-  --radius:10px;
-  --container-width:900px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+/* ---- Base Styles ---- */
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  color: #333;
+  background-color: #fdfbf7;
 }
 
-*{box-sizing:border-box}
-html,body{height:100%;margin:0;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased}
-.container{max-width:var(--container-width);margin:0 auto;padding:24px}
+/* ---- Header ---- */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 10%;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
 
-.site-header{background:linear-gradient(90deg, rgba(196,155,110,0.06), transparent);border-bottom:1px solid rgba(15,23,32,0.04)}
-.site-title{margin:8px 0;font-size:20px}
-.site-nav a{margin-left:12px;color:var(--accent);text-decoration:none;font-weight:500}
+.logo {
+  font-weight: 600;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+  color: #222;
+}
 
-.hero{padding:40px 0;text-align:center}
-.hero h2{margin:0 0 8px;font-size:28px}
-.hero p{margin:0 0 14px;color:var(--muted)}
-.hero-logo{max-width:120px;margin-bottom:16px}
+nav a {
+  margin-left: 2rem;
+  text-decoration: none;
+  color: #555;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
 
-.btn{display:inline-block;padding:10px 16px;background:var(--accent);color:#fff;border-radius:8px;text-decoration:none}
-.btn.outline{background:transparent;color:var(--accent);border:1px solid rgba(196,155,110,0.3)}
+nav a:hover,
+nav a.active {
+  color: #000;
+}
 
-.card{background:var(--card);border-radius:var(--radius);padding:18px;margin:18px 0;box-shadow:0 4px 18px rgba(16,24,40,0.04)}
-.projects-list{list-style:none;padding-left:0;margin:0}
-.projects-list li{padding:10px 0;border-top:1px dashed rgba(15,23,32,0.03)}
-.projects-list li:first-child{border-top:0}
+/* ---- Hero Section (for homepage or projects) ---- */
+.projects-hero {
+  text-align: center;
+  padding: 6rem 10% 3rem;
+  background-color: #faf7f2;
+}
 
-.site-footer{padding:14px 0;color:var(--muted);font-size:13px;text-align:center;margin-top:28px}
+.projects-hero h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.8rem;
+  color: #222;
+}
 
-/* 响应式 */
-@media (max-width:600px){
-  .site-nav{display:block;margin-top:8px}
-  .site-nav a{display:inline-block;margin:6px 8px 0 0}
-  .hero h2{font-size:22px}
+.projects-hero p {
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* ---- Projects Gallery ---- */
+.projects-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  padding: 4rem 10%;
+  background-color: #faf7f2;
+}
+
+.project-item {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+.project-item img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.project-item h3 {
+  font-size: 1.2rem;
+  margin: 1rem;
+  color: #222;
+}
+
+.project-item p {
+  font-size: 0.95rem;
+  margin: 0 1rem 1.2rem;
+  color: #555;
+}
+
+/* ---- Footer ---- */
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: #fff;
+  color: #666;
+  font-size: 0.9rem;
+  border-top: 1px solid #eee;
 }
