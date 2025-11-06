@@ -4,8 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>XUQI Associates - Welcome</title>
-  <link rel="stylesheet" href="styles.css" />
   <style>
+    /* 基本重置 */
     body, html {
       margin: 0;
       padding: 0;
@@ -52,12 +52,6 @@
       text-shadow: 2px 2px 10px rgba(0,0,0,0.6);
       z-index: 10;
       white-space: nowrap;
-      opacity: 1;
-      transition: opacity 1s ease-in-out;
-    }
-
-    .landing-text.fade {
-      opacity: 0;
     }
 
     @media (max-width: 768px) {
@@ -69,13 +63,13 @@
 </head>
 <body>
   <!-- 背景轮播 -->
- <div class="slider">
-  <div class="slide active" style="background-image: url('assets/landingpage1.png');"></div>
-  <div class="slide" style="background-image: url('assets/landingpage2.png');"></div>
-  <div class="slide" style="background-image: url('assets/landingpage3.png');"></div>
-  <div class="slide" style="background-image: url('assets/landingpage4.png');"></div>
-</div>
-
+  <div class="slider">
+    <div class="slide active" style="background-image: url('assets/landingpage1.png');"></div>
+    <div class="slide" style="background-image: url('assets/landingpage2.png');"></div>
+    <div class="slide" style="background-image: url('assets/landingpage3.png');"></div>
+    <div class="slide" style="background-image: url('assets/landingpage4.png');"></div>
+    <div class="slide" style="background-image: url('assets/landingpage5.png');"></div>
+  </div>
 
   <!-- 中央文字 -->
   <div class="landing-text" onclick="goHome()">
@@ -84,27 +78,18 @@
 
   <script>
     const slides = document.querySelectorAll('.slide');
-    const landingText = document.querySelector('.landing-text');
     let current = 0;
 
     function goHome() {
       window.location.href = 'index.html';
     }
 
+    // 自动轮播背景
     setInterval(() => {
-      // 淡出文字
-      landingText.classList.add('fade');
-
-      // 切换背景
       slides[current].classList.remove('active');
       current = (current + 1) % slides.length;
       slides[current].classList.add('active');
-
-      // 文字淡入
-      setTimeout(() => {
-        landingText.classList.remove('fade');
-      }, 1000); // 文字淡入与背景切换同步
-    }, 5000);
+    }, 5000); // 每 5 秒切换
   </script>
 </body>
 </html>
