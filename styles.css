@@ -13,48 +13,69 @@ body {
 }
 
 /* ========== Header ========== */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.5rem 4rem;
-  border-bottom: 1px solid #eee;
+.site-header {
+  width: 100%;
   background-color: #fff7f0;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
   position: sticky;
   top: 0;
   z-index: 10;
 }
 
-.logo {
-  width: 100px; /* 控制 Logo 大小 */
+.header-inner {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.header-left {
+  display: flex;
+  flex-direction: column; /* logo 上，文字下 */
+  align-items: flex-start;
+  gap: 0.2rem;
+}
+
+.header-left .logo {
+  width: 120px;
   height: auto;
 }
 
-nav {
+.header-left .site-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 5px 0 0 0;
+  color: #333;
+}
+
+.site-nav {
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 2rem;
-  margin-left: 4rem;
+  gap: 20px;
 }
 
-nav a {
+.site-nav a {
   text-decoration: none;
-  color: #262137; /* 暖色调文字 */
-  font-size: 1rem;
-  transition: color 0.2s ease;
+  color: #262137;
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
 
-nav a:hover {
+.site-nav a:hover {
   color: #e07b39;
 }
 
+/* ========== Hero Section ========== */
 .hero {
-  height: 100vh; /* 全屏高度 */
+  height: 100vh;
   display: flex;
-  justify-content: center; /* 水平居中 */
-  align-items: center; /* 垂直居中 */
-  flex-direction: column; /* 上下排列 */
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   text-align: center;
   padding: 0 2rem;
 }
@@ -96,10 +117,33 @@ nav a:hover {
 }
 
 .btn, .btn.outline {
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
   transition: transform 0.2s ease, background-color 0.3s ease;
 }
 
-.btn:hover, .btn.outline:hover {
+.btn {
+  background-color: #e07b39;
+  color: #fff;
+  border: none;
+}
+
+.btn:hover {
+  background-color: #c25a17;
+  transform: translateY(-2px);
+}
+
+.btn.outline {
+  background-color: transparent;
+  color: #e07b39;
+  border: 2px solid #e07b39;
+}
+
+.btn.outline:hover {
+  background-color: #e07b39;
+  color: #fff;
   transform: translateY(-2px);
 }
 
@@ -153,137 +197,6 @@ footer {
 
 /* ========== Responsive ========== */
 @media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  nav {
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-left: 0;
-    margin-top: 0.5rem;
-  }
-  .hero {
-    padding: 4rem 2rem;
-  }
-}
-/* ========== Header ========== */
-.site-header {
-  background-color: #fff7f0; /* 背景保持淡奶油色 */
-  border-bottom: 1px solid #e0d6c8;
-  padding: 1rem 0;
-}
-
-.header-inner {
-  display: flex;
-  justify-content: space-between; /* 左右分布 */
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
-}
-
-/* 左侧 logo + title */
-.header-left {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-}
-
-.logo {
-  height: 48px;
-  width: auto;
-}
-
-.site-title {
-  font-size: 1.5rem;
-  color: #333;
-  font-weight: 600;
-}
-
-/* 导航栏样式 */
-.site-nav {
-  display: flex;
-  gap: 2rem;
-}
-
-.site-nav a {
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-  transition: color 0.2s ease;
-}
-
-.site-nav a:hover {
-  color: #e07b39; /* 暖橙 hover */
-}
-
-/* 响应式（移动端自动换行） */
-@media (max-width: 768px) {
-  .header-inner {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
-  }
-
-  .site-nav {
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-}
-/* === Header Layout Fix === */
-.site-header {
-  width: 100%;
-  background-color: #fff7f0; /* 保持暖色调背景 */
-  padding: 1rem 2rem;
-  display: flex;
-  justify-content: center; /* 中间包裹一层 header-inner */
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-}
-
-.header-inner {
-  width: 100%;
-  max-width: 1200px; /* 控制整体宽度 */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.header-left {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-}
-
-.logo {
-  height: 45px; /* 调整 logo 尺寸 */
-  width: auto;
-}
-
-.site-title {
-  font-size: 1.4rem;
-  font-weight: 600;
-  color: #333;
-}
-
-.site-nav {
-  display: flex;
-  gap: 1.8rem;
-}
-
-.site-nav a {
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-.site-nav a:hover {
-  color: #e07b39;
-}
-
-/* === 移动端布局（自动换行） === */
-@media (max-width: 768px) {
   .header-inner {
     flex-direction: column;
     align-items: flex-start;
@@ -293,114 +206,18 @@ footer {
   .site-nav {
     flex-wrap: wrap;
     gap: 1rem;
-  }
-
-  .logo {
-    height: 40px;
-  }
-}
-/* Header 内部整体布局 */
-.header-inner {
-  display: flex;
-  justify-content: space-between; /* 左右两端对齐 */
-  align-items: center;
-  padding: 0 1rem; /* 左右内边距 */
-}
-
-/* 左侧 logo + 文字 */
-.header-left {
-  display: flex;
-  flex-direction: column; /* logo 在上，文字在下 */
-  align-items: flex-start; /* 靠左 */
-  gap: 0.2rem;
-}
-
-.logo {
-  height: 45px; /* logo 高度 */
-  width: auto;
-}
-
-.site-title {
-  font-size: 1rem; /* 小一点 */
-  font-weight: 600;
-  margin: 0;
-  color: #333;
-}
-
-/* 导航靠右 */
-.site-nav {
-  display: flex;
-  gap: 2rem; /* 菜单间距 */
-}
-
-.site-nav a {
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-}
-
-.site-nav a:hover {
-  color: #e07b39; /* 暖色 hover */
-}
-/* Header 样式 */
-.site-header {
-  background: #fff7f0; /* 背景可根据需求改 */
-  padding: 10px 20px;
-}
-
-.header-inner {
-  display: flex;
-  justify-content: space-between; /* 左右分开 */
-  align-items: center;
-  max-width: 1200px; /* 控制宽度 */
-  margin: 0 auto;
-}
-
-.header-left {
-  display: flex;
-  flex-direction: column; /* logo 上，文字下 */
-  align-items: flex-start; /* 靠左 */
-}
-
-.header-left .logo {
-  width: 60px; /* logo 大小，可调 */
-  height: auto;
-}
-
-.header-left .site-title {
-  font-size: 18px; /* 比 hero 小 */
-  margin: 5px 0 0 0; /* 调整间距 */
-}
-
-.site-nav {
-  display: flex;
-  gap: 20px; /* 导航间距 */
-}
-
-.site-nav a {
-  text-decoration: none;
-  color: #262137; /* 导航文字颜色 */
-  font-weight: 500;
-}
-
-/* 响应式：手机小屏幕自动换行 */
-@media (max-width: 768px) {
-  .header-inner {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .site-nav {
     margin-top: 10px;
-    flex-wrap: wrap;
   }
-}
-.header-left .logo {
-  width: 120px; /* Logo 大一点 */
-  height: auto;
-}
 
-.header-left .site-title {
-  font-size: 16px; /* 文字小一点 */
-  margin: 5px 0 0 0; /* 调整文字和 logo 之间的间距 */
+  .hero {
+    padding: 4rem 2rem;
+  }
+
+  .header-left .logo {
+    width: 100px;
+  }
+
+  .header-left .site-title {
+    font-size: 14px;
+  }
 }
