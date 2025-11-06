@@ -152,81 +152,87 @@
   </div>
 
   <script>
-    const slides = document.querySelectorAll('.slide');
-    const dots = document.querySelectorAll('.dots span');
-    const landingText = document.querySelector('.landing-text'); // RED: 用于波纹和点击跳转
-    const landingLogo = document.querySelector('.landing-logo'); // RED: 用于波纹和点击跳转
-    let current = 0;
-    let interval = null;
+const slides = document.querySelectorAll('.slide');
+const dots = document.querySelectorAll('.dots span');
+const landingText = document.querySelector('.landing-text');
+const landingLogo = document.querySelector('.landing-logo');
+let current = 0;
+let interval = null;
 
-    function goHome() {  /* RED: 新增函数，点击文字或logo进入首页并显示波纹 */
-      const ripple = document.createElement('div');
-      ripple.classList.add('ripple');
-      const rect = landingLogo.getBoundingClientRect();
-      ripple.style.left = `${rect.width/2}px`;
-      ripple.style.top = `${rect.height/2}px`;
-      landingLogo.appendChild(ripple);
-      setTimeout(() => ripple.remove(), 600);
-      setTimeout(() => window.location.href = 'index.html', 150);
-    }
+function goHome() {
+  const ripple = document.createElement('div');
+  ripple.classList.add('ripple');
+  const rect = landingLogo.getBoundingClientRect();
+  ripple.style.left = `${rect.width/2}px`;
+  ripple.style.top = `${rect.height/2}px`;
+  landingLogo.appendChild(ripple);
+  setTimeout(() => ripple.remove(), 600);
+  // 上滑动画跳转
+  startPageTransition();
+}
 
-    function showSlide(index) {
-      slides.forEach((s, i) => s.classList.remove('active'));
-      slides[index].classList.add('active');
-      dots.forEach((d,i)=>d.classList.remove('active'));
-      dots[index].classList.add('active');
-      current = index;
-    }
+function showSlide(index) {
+  slides.forEach((s, i) => s.classList.remove('active'));
+  slides[index].classList.add('active');
+  dots.forEach((d,i)=>d.classList.remove('active'));
+  dots[index].classList.add('active');
+  current = index;
+}
 
-    // 自动轮播
-    function startSlider() {
-      interval = setInterval(() => {
-        let next = (current + 1) % slides.length;
-        showSlide(next);
-      }, 5000);
-    }
+function startSlider() {
+  interval = setInterval(() => {
+    let next = (current + 1) % slides.length;
+    showSlide(next);
+  }, 5000);
+}
 
+startSlider();
+
+dots.forEach((dot, i) => {
+  dot.addEventListener('click', () => {
+    showSlide(i);
+    clearInterval(interval);
     startSlider();
+  });
+});
 
-    // 点击圆点手动切换
-    dots.forEach((dot, i) => {
-      dot.addEventListener('click', () => {
-        showSlide(i);
-        clearInterval(interval);
-        startSlider();
-      });
-    });
+let startX = 0, startY = 0;
+document.addEventListener('touchstart', (e) => {
+  startX = e.touches[0].clientX;
+  startY = e.touches[0].clientY;
+}, {passive:true});
 
-    // RED: 新增触摸手势，左右滑动切换轮播，上滑进入首页
-    let startX = 0, startY = 0;
-    document.addEventListener('touchstart', (e) => {
-      startX = e.touches[0].clientX;
-      startY = e.touches[0].clientY;
-    }, {passive:true});
+document.addEventListener('touchend', (e) => {
+  const endX = e.changedTouches[0].clientX;
+  const endY = e.changedTouches[0].clientY;
+  const deltaX = endX - startX;
+  const deltaY = endY - startY;
 
-    document.addEventListener('touchend', (e) => {
-      const endX = e.changedTouches[0].clientX;
-      const endY = e.changedTouches[0].clientY;
-      const deltaX = endX - startX;
-      const deltaY = endY - startY;
+  if (Math.abs(deltaY) > Math.abs(deltaX) && deltaY < -50) {
+    startPageTransition();
+    return;
+  }
 
-      // 上滑进入首页
-      if (Math.abs(deltaY) > Math.abs(deltaX) && deltaY < -50) {
-        window.location.href = 'index.html';
-        return;
-      }
+  if (Math.abs(deltaX) > Math.abs(deltaY)) {
+    if (deltaX > 50) {
+      showSlide((current - 1 + slides.length) % slides.length);
+    } else if (deltaX < -50) {
+      showSlide((current + 1) % slides.length);
+    }
+    clearInterval(interval);
+    startSlider();
+  }
+}, {passive:true});
 
-      // 左右滑切换
-      if (Math.abs(deltaX) > Math.abs(deltaY)) {
-        if (deltaX > 50) {
-          showSlide((current - 1 + slides.length) % slides.length);
-        } else if (deltaX < -50) {
-          showSlide((current + 1) % slides.length);
-        }
-        clearInterval(interval);
-        startSlider();
-      }
-    }, {passive:true});
-  </script>
+// 平滑上滑动画
+function startPageTransition() {
+  document.body.style.transition = 'transform 0.6s ease';
+  document.body.style.transform = 'translateY(-100vh)';
+  setTimeout(() => {
+    window.location.href = 'index.html';
+  }, 600);
+}
+</script>
+
 </body>
 </html>
