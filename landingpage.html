@@ -151,25 +151,13 @@
     <span></span>
   </div>
 
-  <script>
+<script>
 const slides = document.querySelectorAll('.slide');
 const dots = document.querySelectorAll('.dots span');
 const landingText = document.querySelector('.landing-text');
 const landingLogo = document.querySelector('.landing-logo');
 let current = 0;
 let interval = null;
-
-function goHome() {
-  const ripple = document.createElement('div');
-  ripple.classList.add('ripple');
-  const rect = landingLogo.getBoundingClientRect();
-  ripple.style.left = `${rect.width/2}px`;
-  ripple.style.top = `${rect.height/2}px`;
-  landingLogo.appendChild(ripple);
-  setTimeout(() => ripple.remove(), 600);
-  // 上滑动画跳转
-  startPageTransition();
-}
 
 function showSlide(index) {
   slides.forEach((s, i) => s.classList.remove('active'));
@@ -185,7 +173,6 @@ function startSlider() {
     showSlide(next);
   }, 5000);
 }
-
 startSlider();
 
 dots.forEach((dot, i) => {
@@ -195,6 +182,10 @@ dots.forEach((dot, i) => {
     startSlider();
   });
 });
+
+function goHome() {
+  startPageTransition();
+}
 
 let startX = 0, startY = 0;
 document.addEventListener('touchstart', (e) => {
@@ -224,15 +215,15 @@ document.addEventListener('touchend', (e) => {
   }
 }, {passive:true});
 
-// 平滑上滑动画
+// 平滑上滑 + 淡出过渡动画
 function startPageTransition() {
-  document.body.style.transition = 'transform 0.6s ease';
-  document.body.style.transform = 'translateY(-100vh)';
+  document.body.classList.add('page-transition');
   setTimeout(() => {
     window.location.href = 'index.html';
-  }, 600);
+  }, 800);
 }
 </script>
+
 
 </body>
 </html>
