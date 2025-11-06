@@ -268,3 +268,18 @@ footer .footer-logo {
     font-size: 14px;
   }
 }
+/* 上滑淡出动画 */
+.page-transition {
+  animation: slideFadeOut 0.8s ease forwards;
+}
+
+@keyframes slideFadeOut {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-80px);
+  }
+}
