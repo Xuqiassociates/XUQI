@@ -416,3 +416,12 @@ footer {
     flex-wrap: wrap;
   }
 }
+.header-left .logo {
+  width: 120px; /* Logo 大一点 */
+  height: auto;
+}
+
+.header-left .site-title {
+  font-size: 16px; /* 文字小一点 */
+  margin: 5px 0 0 0; /* 调整文字和 logo 之间的间距 */
+}
