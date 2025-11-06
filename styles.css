@@ -71,13 +71,24 @@ body {
 
 /* ========== Hero Section ========== */
 .hero {
-  height: 100vh;
+  /* height: 100vh; */  /* 删除固定高度 */
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   text-align: center;
-  padding: 0 2rem;
+  padding: 4rem 2rem 6rem 2rem; /* 上下增加 padding，保证内容与 About Us 不重叠 */
+}
+
+.hero-image {
+  margin-bottom: 3rem; /* 图片下方空 3rem */
+}
+
+.cta {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 4rem; /* 按钮下方空 4rem */
 }
 
 .hero h2 {
