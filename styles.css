@@ -363,3 +363,56 @@ footer {
 .site-nav a:hover {
   color: #e07b39; /* 暖色 hover */
 }
+/* Header 样式 */
+.site-header {
+  background: #fff7f0; /* 背景可根据需求改 */
+  padding: 10px 20px;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between; /* 左右分开 */
+  align-items: center;
+  max-width: 1200px; /* 控制宽度 */
+  margin: 0 auto;
+}
+
+.header-left {
+  display: flex;
+  flex-direction: column; /* logo 上，文字下 */
+  align-items: flex-start; /* 靠左 */
+}
+
+.header-left .logo {
+  width: 60px; /* logo 大小，可调 */
+  height: auto;
+}
+
+.header-left .site-title {
+  font-size: 18px; /* 比 hero 小 */
+  margin: 5px 0 0 0; /* 调整间距 */
+}
+
+.site-nav {
+  display: flex;
+  gap: 20px; /* 导航间距 */
+}
+
+.site-nav a {
+  text-decoration: none;
+  color: #262137; /* 导航文字颜色 */
+  font-weight: 500;
+}
+
+/* 响应式：手机小屏幕自动换行 */
+@media (max-width: 768px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .site-nav {
+    margin-top: 10px;
+    flex-wrap: wrap;
+  }
+}
