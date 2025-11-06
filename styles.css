@@ -187,6 +187,28 @@ body {
   font-size: 0.95rem;
 }
 
+/* About Us Section */
+.card {
+  text-align: center;        /* 水平居中 */
+  max-width: 900px;          /* 控制宽度 */
+  margin: 4rem auto 0 auto;  /* 上方留距离，左右居中 */
+  padding: 0 2rem;
+}
+
+.card h3 {
+  font-size: 2.2rem;
+  color: #262137;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.card p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 1rem;
+  line-height: 1.8;
+}
+
 /* ========== Footer ========== */
 footer {
   padding: 2rem 4rem;
