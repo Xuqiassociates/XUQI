@@ -252,3 +252,71 @@ footer {
     gap: 1rem;
   }
 }
+/* === Header Layout Fix === */
+.site-header {
+  width: 100%;
+  background-color: #fff7f0; /* 保持暖色调背景 */
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center; /* 中间包裹一层 header-inner */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.header-inner {
+  width: 100%;
+  max-width: 1200px; /* 控制整体宽度 */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.logo {
+  height: 45px; /* 调整 logo 尺寸 */
+  width: auto;
+}
+
+.site-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.site-nav {
+  display: flex;
+  gap: 1.8rem;
+}
+
+.site-nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.site-nav a:hover {
+  color: #e07b39;
+}
+
+/* === 移动端布局（自动换行） === */
+@media (max-width: 768px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .site-nav {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .logo {
+    height: 40px;
+  }
+}
