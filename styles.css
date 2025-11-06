@@ -320,3 +320,46 @@ footer {
     height: 40px;
   }
 }
+/* Header 内部整体布局 */
+.header-inner {
+  display: flex;
+  justify-content: space-between; /* 左右两端对齐 */
+  align-items: center;
+  padding: 0 1rem; /* 左右内边距 */
+}
+
+/* 左侧 logo + 文字 */
+.header-left {
+  display: flex;
+  flex-direction: column; /* logo 在上，文字在下 */
+  align-items: flex-start; /* 靠左 */
+  gap: 0.2rem;
+}
+
+.logo {
+  height: 45px; /* logo 高度 */
+  width: auto;
+}
+
+.site-title {
+  font-size: 1rem; /* 小一点 */
+  font-weight: 600;
+  margin: 0;
+  color: #333;
+}
+
+/* 导航靠右 */
+.site-nav {
+  display: flex;
+  gap: 2rem; /* 菜单间距 */
+}
+
+.site-nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.site-nav a:hover {
+  color: #e07b39; /* 暖色 hover */
+}
