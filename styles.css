@@ -71,13 +71,14 @@ body {
 
 /* ========== Hero Section ========== */
 .hero {
-  /* height: 100vh; */  /* 删除固定高度 */
+ /* 不要固定高度，让内容撑开 */
+  min-height: 70vh;  /* 可保留最小高度，让视觉效果仍然高 */
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
   text-align: center;
-  padding: 4rem 2rem 6rem 2rem; /* 上下增加 padding，保证内容与 About Us 不重叠 */
+  justify-content: flex-start; /* 顶部对齐，而不是居中 */
+  align-items: center;
+  padding: 4rem 2rem 2rem 2rem; /* 上方、左右、下方 padding */
 }
 
 .hero-image {
@@ -200,9 +201,9 @@ body {
 
 /* About Us Section */
 .card {
-  text-align: center;        /* 水平居中 */
-  max-width: 900px;          /* 控制宽度 */
-  margin: 4rem auto 0 auto;  /* 上方留距离，左右居中 */
+  text-align: center;
+  max-width: 900px;
+  margin: 4rem auto; /* 上下间距都 4rem */
   padding: 0 2rem;
 }
 
