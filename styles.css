@@ -68,7 +68,56 @@ body {
 .site-nav a:hover {
   color: #e07b39;
 }
+/* ========== Responsive Navigation ========== */
 
+/* 默认导航：桌面端显示 */
+.site-nav {
+  display: flex;
+  gap: 2rem;
+}
+
+/* 汉堡按钮默认隐藏 */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #333;
+}
+
+/* 手机端样式 */
+@media (max-width: 768px) {
+  /* 汉堡按钮显示 */
+  .menu-toggle {
+    display: block;
+  }
+
+  /* 导航改为竖向 + 隐藏状态 */
+  .site-nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px; /* header 高度 */
+    right: 20px;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    padding: 1rem;
+    z-index: 1000;
+  }
+
+  /* 激活状态（点击后显示） */
+  .site-nav.active {
+    display: flex;
+  }
+
+  .site-nav a {
+    padding: 0.5rem 0;
+    color: #333;
+    text-decoration: none;
+  }
+}
 /* ========== Hero Section ========== */
 .hero {
  /* 不要固定高度，让内容撑开 */
