@@ -6,207 +6,84 @@
   <title>XUQI Associates - Projects</title>
   <meta name="description" content="XUQI Associates Projects" />
   <link rel="stylesheet" href="styles.css" />
-  <style>
-    /* 汉堡按钮样式 */
-    .menu-toggle {
-      display: none;
-      font-size: 2rem;
-      background: none;
-      border: none;
-      cursor: pointer;
-    }
-
-    /* 移动端显示汉堡菜单 */
-    @media (max-width: 768px) {
-      .menu-toggle {
-        display: block;
-      }
-
-      /* 默认隐藏导航，点击按钮显示 */
-      .site-nav {
-        display: none;
-        flex-direction: column;
-        gap: 1rem;
-        position: absolute;
-        top: 100%;
-        right: 0;
-        background: #fff;
-        padding: 1rem;
-        border-radius: 0 0 8px 8px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      }
-
-      .site-nav.active {
-        display: flex;
-      }
-    }
-
-    /* Projects section layout */
-    main {
-      padding: 4rem 2rem;
-    }
-
-    #projects {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    #projects h3 {
-      text-align: center;
-      font-size: 2rem;
-      margin-bottom: 2rem;
-      color: #262137;
-    }
-
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-    }
-
-    .project {
-      background: #fff7f0;
-      border-radius: 16px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .project img {
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-    }
-
-    .project-content {
-      padding: 1rem;
-    }
-
-    .project-content h3 {
-      margin-top: 0;
-      font-size: 1.2rem;
-      color: #262137;
-    }
-
-    .project-content p {
-      font-size: 0.95rem;
-      color: #333;
-    }
-  </style>
 </head>
+
 <body>
-  <!-- Header -->
-  <header class="site-header">
-    <div class="header-inner">
-      <div class="header-left">
-        <a href="landingpage.html">
-          <img src="assets/Logo" alt="XUQI Associates Logo" class="logo">
-        </a>
-        <h1 class="site-title">XUQI Associates</h1>
+<header class="site-header">
+  <div class="header-inner">
+    <div class="header-left">
+      <a href="index.html">
+        <img src="assets/Logo.png" alt="XUQI Associates Logo" class="logo">
+      </a>
+      <h1 class="site-title">XUQI Associates</h1>
+    </div>
+
+    <button class="menu-toggle" aria-label="Toggle navigation">&#9776;</button>
+
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="index.html#about">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section id="projects" class="card">
+    <h3>Our Projects</h3>
+
+    <div class="projects-grid">
+      <div class="project">
+        <img src="assets/project1.jpeg" alt="Riverside Residential Extension">
+        <div class="project-content">
+          <h3>Riverside Residential Extension – Cambridge</h3>
+          <p>Complete structural design and assessment for a two-storey extension to a Victorian townhouse.</p>
+        </div>
       </div>
 
-      <!-- 汉堡按钮 -->
-      <button class="menu-toggle" aria-label="Toggle navigation">
-        &#9776;
-      </button>
-
-      <!-- 导航 -->
-      <nav class="site-nav">
-        <a href="index.html">Home</a>
-        <a href="index.html#about">About</a>
-        <a href="projects.html">Projects</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <!-- Projects Section -->
-  <main>
-    <section id="projects" class="card">
-      <h3>Our Projects</h3>
-      <div class="projects-grid">
-        <div class="project">
-          <img src="assets/project1.jpeg" alt="Riverside Residential Extension">
-          <div class="project-content">
-            <h3>Riverside Residential Extension – Cambridge</h3>
-            <p>Complete structural design and assessment for a two-storey extension to a Victorian townhouse. Delivered safe load-bearing solutions while preserving the character of the original building.</p>
-          </div>
-        </div>
-        <div class="project">
-          <img src="assets/project2.jpeg" alt="Modern Office Fit-Out">
-          <div class="project-content">
-            <h3>Modern Office Fit-Out – Cambridge Business Park</h3>
-            <p>Structural survey and reinforcement design for an open-plan office renovation. Optimized floor load capacities and ensured compliance with current building regulations.</p>
-          </div>
-        </div>
-        <div class="project">
-          <img src="assets/project3.jpeg" alt="Heritage Building Refurbishment">
-          <div class="project-content">
-            <h3>Heritage Building Refurbishment – Central Cambridge</h3>
-            <p>Assessment and strengthening of a Grade II listed building. Implemented minimal intervention techniques to maintain historical features while improving structural integrity.</p>
-          </div>
-        </div>
-        <div class="project">
-          <img src="assets/project4.jpeg" alt="Loft Conversion">
-          <div class="project-content">
-            <h3>Loft Conversion – Suburban Cambridge</h3>
-            <p>Structural calculations and support design for a loft conversion. Maximized usable space while ensuring full compliance with Building Control.</p>
-          </div>
-        </div>
-        <div class="project">
-          <img src="assets/project5.jpeg" alt="Sustainable New Build">
-          <div class="project-content">
-            <h3>Sustainable New Build – Cambridge Outskirts</h3>
-            <p>Full structural design for a low-carbon, energy-efficient home. Integrated steel and timber solutions to reduce environmental impact without compromising safety.</p>
-          </div>
+      <div class="project">
+        <img src="assets/project2.jpeg" alt="Modern Office Fit-Out">
+        <div class="project-content">
+          <h3>Modern Office Fit-Out – Cambridge Business Park</h3>
+          <p>Structural survey and reinforcement design for an open-plan office renovation.</p>
         </div>
       </div>
-    </section>
-  </main>
 
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <img src="assets/Logo" alt="XUQI Associates Logo" class="footer-logo">
-      <p>© <span id="year"></span> XUQI Associates</p>
+      <div class="project">
+        <img src="assets/project3.jpeg" alt="Heritage Building Refurbishment">
+        <div class="project-content">
+          <h3>Heritage Building Refurbishment – Central Cambridge</h3>
+          <p>Assessment and strengthening of a Grade II listed building.</p>
+        </div>
+      </div>
+
+      <div class="project">
+        <img src="assets/project4.jpeg" alt="Loft Conversion">
+        <div class="project-content">
+          <h3>Loft Conversion – Suburban Cambridge</h3>
+          <p>Structural calculations and support design for a loft conversion.</p>
+        </div>
+      </div>
+
+      <div class="project">
+        <img src="assets/project5.jpeg" alt="Sustainable New Build">
+        <div class="project-content">
+          <h3>Sustainable New Build – Cambridge Outskirts</h3>
+          <p>Full structural design for a low-carbon, energy-efficient home.</p>
+        </div>
+      </div>
     </div>
-  </footer>
+  </section>
+</main>
 
-  <!-- JS -->
-  <script>
-    const menuToggle = document.querySelector('.menu-toggle');
-    const siteNav = document.querySelector('.site-nav');
+<footer class="site-footer">
+  <div class="footer-inner">
+    <img src="assets/Logo.png" alt="XUQI Associates Logo" class="footer-logo">
+    <p>© <span id="year"></span> XUQI Associates</p>
+  </div>
+</footer>
 
-    if (menuToggle && siteNav) {
-      // 点击汉堡按钮：切换导航
-      menuToggle.addEventListener('click', (e) => {
-        siteNav.classList.toggle('active');
-        menuToggle.classList.toggle('active');
-        e.stopPropagation();
-      });
-
-      // 点击导航链接：自动收起
-      siteNav.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-          siteNav.classList.remove('active');
-          menuToggle.classList.remove('active');
-        });
-      });
-
-      // 点击页面其他地方：收起导航
-      document.addEventListener('click', (e) => {
-        if (siteNav.classList.contains('active') &&
-            !siteNav.contains(e.target) &&
-            !menuToggle.contains(e.target)) {
-          siteNav.classList.remove('active');
-          menuToggle.classList.remove('active');
-        }
-      });
-    }
-
-    // 年份显示
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+<script src="script.js"></script>
 </body>
 </html>
