@@ -53,9 +53,10 @@ body {
   color: #333;
 }
 
+/* ========== Navigation ========== */
 .site-nav {
   display: flex;
-  gap: 20px;
+  gap: 2rem;
 }
 
 .site-nav a {
@@ -68,94 +69,102 @@ body {
 .site-nav a:hover {
   color: #e07b39;
 }
-/* ========== Responsive Navigation ========== */
 
-/* 默认导航：桌面端显示 */
-.site-nav {
-  display: flex;
-  gap: 2rem;
-}
-
-/* 汉堡按钮默认隐藏 */
+/* ========== Hamburger Button ========== */
 .menu-toggle {
-  display: none;
+  display: none; /* 桌面端隐藏 */
+  font-size: 2.2rem;
   background: none;
   border: none;
-  font-size: 2rem;
   cursor: pointer;
-  color: #333;
+  color: #e07b39;
+  padding: 0.5rem 0.7rem;
+  position: absolute;
+  top: 15px;
+  right: 0;
+  z-index: 200;
+  transition: transform 0.3s ease;
 }
 
-/* 手机端样式 */
+.menu-toggle.active {
+  transform: rotate(90deg); /* 可改为 X 动画 */
+}
+
+/* ========== Responsive Styles ========== */
 @media (max-width: 768px) {
+
+  /* Header 调整 */
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    position: relative;
+  }
+
+  .header-left .logo {
+    width: 100px;
+  }
+
+  .header-left .site-title {
+    font-size: 14px;
+  }
+
   /* 汉堡按钮显示 */
   .menu-toggle {
     display: block;
   }
 
-  /* 导航改为竖向 + 隐藏状态 */
+  /* 移动端导航 */
   .site-nav {
-    display: none;
     flex-direction: column;
+    gap: 10px;
     position: absolute;
-    top: 70px; /* header 高度 */
-    right: 20px;
-    background: #fff;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    top: 60px;
+    right: 0;
+    background-color: #fff;
     border-radius: 8px;
-    padding: 1rem;
-    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 10px 20px;
+    z-index: 150;
+
+    /* 默认隐藏 */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px);
+    transition: all 0.3s ease;
   }
 
-  /* 激活状态（点击后显示） */
   .site-nav.active {
-    display: flex;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
   }
 
   .site-nav a {
     padding: 0.5rem 0;
     color: #333;
     text-decoration: none;
+    font-weight: 500;
+  }
+
+  .site-nav a:hover {
+    color: #e07b39;
   }
 }
+
 /* ========== Hero Section ========== */
 .hero {
- /* 不要固定高度，让内容撑开 */
-  min-height: 70vh;  /* 可保留最小高度，让视觉效果仍然高 */
+  min-height: 70vh;
   display: flex;
   flex-direction: column;
   text-align: center;
-  justify-content: flex-start; /* 顶部对齐，而不是居中 */
+  justify-content: flex-start;
   align-items: center;
-  padding: 4rem 2rem 2rem 2rem; /* 上方、左右、下方 padding */
+  padding: 4rem 2rem 2rem 2rem;
 }
 
 .hero-image {
-  margin-bottom: 3rem; /* 图片下方空 3rem */
-}
-
-.cta {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-bottom: 4rem; /* 按钮下方空 4rem */
-}
-
-.hero h2 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  font-weight: 700;
-  color: #262137;
-}
-
-.hero p {
-  font-size: 1.2rem;
-  color: #555;
-  margin-bottom: 1.5rem;
-}
-
-.hero-image {
-  margin-bottom: 4rem; /* 图片下方空 4rem */
+  margin-bottom: 4rem;
 }
 
 .hero-image img {
@@ -175,6 +184,7 @@ body {
   display: flex;
   justify-content: center;
   gap: 1rem;
+  margin-bottom: 4rem;
 }
 
 .btn, .btn.outline {
@@ -248,11 +258,11 @@ body {
   font-size: 0.95rem;
 }
 
-/* About Us Section */
+/* ========== Card Section ========== */
 .card {
   text-align: center;
   max-width: 900px;
-  margin: 4rem auto; /* 上下间距都 4rem */
+  margin: 4rem auto;
   padding: 0 2rem;
 }
 
@@ -278,46 +288,19 @@ footer {
   color: #262137;
 }
 
-/* Footer 内部容器，logo 和文字上下排列 */
 footer .footer-inner {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem; /* logo 和文字的间距 */
+  gap: 1rem;
 }
 
 footer .footer-logo {
-  width: 100px; /* 根据需要调整大小 */
+  width: 100px;
   height: auto;
 }
 
-/* ========== Responsive ========== */
-@media (max-width: 768px) {
-  .header-inner {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5rem;
-  }
-
-  .site-nav {
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-top: 10px;
-  }
-
-  .hero {
-    padding: 4rem 2rem;
-  }
-
-  .header-left .logo {
-    width: 100px;
-  }
-
-  .header-left .site-title {
-    font-size: 14px;
-  }
-}
-/* 上滑淡出动画 */
+/* ========== Page Transition Animation ========== */
 .page-transition {
   animation: slideFadeOut 0.8s ease forwards;
 }
@@ -330,71 +313,5 @@ footer .footer-logo {
   100% {
     opacity: 0;
     transform: translateY(-80px);
-  }
-}
-/* ---------- 汉堡按钮 ---------- */
-.menu-toggle {
-  display: none; /* 桌面端隐藏 */
-  font-size: 2.2rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: #e07b39;
-  padding: 0.5rem 0.7rem;
-  position: absolute;
-  top: 15px;
-  right: 0;
-  z-index: 200;
-  transition: transform 0.3s ease;
-}
-
-.menu-toggle.active {
-  transform: rotate(90deg); /* 可改为 X 动画 */
-}
-
-/* ---------- 手机端导航 ---------- */
-@media (max-width: 768px) {
-  .header-inner {
-    position: relative;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-
-  .site-nav {
-    flex-direction: column;
-    gap: 10px;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    padding: 10px 20px;
-    z-index: 150;
-
-    /* 完全隐藏 */
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-20px);
-    transition: all 0.3s ease;
-  }
-
-  .site-nav.active {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-  }
-
-  .site-nav a {
-    padding: 0.5rem 0;
-    color: #333;
-    text-decoration: none;
-    font-weight: 500;
-  }
-
-  .site-nav a:hover {
-    color: #e07b39;
   }
 }
