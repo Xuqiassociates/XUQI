@@ -343,47 +343,48 @@ footer .footer-logo {
   padding: 0.5rem 0.7rem;
   position: absolute;
   top: 15px;
-  right: 0; /* 相对于 header-inner */
+  right: 0;
   z-index: 200;
   transition: transform 0.3s ease;
 }
 
 .menu-toggle.active {
-  transform: rotate(90deg); /* 点击变成 X 的动画效果，可自定义 */
+  transform: rotate(90deg); /* 可改为 X 动画 */
 }
 
 /* ---------- 手机端导航 ---------- */
 @media (max-width: 768px) {
   .header-inner {
-    position: relative; /* 汉堡按钮相对定位 */
+    position: relative;
   }
 
   .menu-toggle {
-    display: block; /* 手机端显示按钮 */
+    display: block;
   }
 
   .site-nav {
-    display: none;                  /* 默认隐藏 */
     flex-direction: column;
     gap: 10px;
     position: absolute;
-    top: 60px;                      /* header 高度 */
+    top: 60px;
     right: 0;
     background-color: #fff;
-    border: 1px solid #ccc;
-    padding: 10px 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    opacity: 0;                      /* 初始透明 */
-    transform: translateY(-10px);   /* 初始上移一点 */
-    transition: all 0.3s ease;
+    padding: 10px 20px;
     z-index: 150;
+
+    /* 完全隐藏 */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px);
+    transition: all 0.3s ease;
   }
 
   .site-nav.active {
-    display: flex;                   /* 展开时显示 */
-    opacity: 1;                       /* 透明度动画 */
-    transform: translateY(0);         /* 回到正常位置 */
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
   }
 
   .site-nav a {
