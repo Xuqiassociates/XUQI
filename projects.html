@@ -83,3 +83,38 @@
   </script>
 </body>
 </html>
+<script>
+  const menuToggle = document.querySelector('.menu-toggle');
+  const siteNav = document.querySelector('.site-nav');
+
+  // 点击汉堡按钮：切换导航
+  menuToggle.addEventListener('click', (e) => {
+    siteNav.classList.toggle('active');
+    menuToggle.classList.toggle('active');
+
+    // 阻止事件冒泡，避免点击按钮时触发 document 点击关闭
+    e.stopPropagation();
+  });
+
+  // 点击导航链接：自动收起
+  siteNav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      siteNav.classList.remove('active');
+      menuToggle.classList.remove('active');
+    });
+  });
+
+  // 点击页面其他地方：收起导航
+  document.addEventListener('click', (e) => {
+    // 如果导航是打开状态，并且点击目标不是导航或汉堡按钮
+    if (siteNav.classList.contains('active') &&
+        !siteNav.contains(e.target) &&
+        !menuToggle.contains(e.target)) {
+      siteNav.classList.remove('active');
+      menuToggle.classList.remove('active');
+    }
+  });
+
+  // 年份脚本
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
