@@ -76,3 +76,24 @@
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
 </script>
+<script>
+  // 汉堡按钮展开/折叠菜单
+  const menuToggle = document.querySelector('.menu-toggle');
+  const siteNav = document.querySelector('.site-nav');
+
+  menuToggle.addEventListener('click', () => {
+    siteNav.classList.toggle('active');
+  });
+
+  // 可选：点击导航项后自动收起（手机端）
+  siteNav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      if (siteNav.classList.contains('active')) {
+        siteNav.classList.remove('active');
+      }
+    });
+  });
+
+  // 年份脚本保留
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
