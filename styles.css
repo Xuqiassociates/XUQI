@@ -332,3 +332,56 @@ footer .footer-logo {
     transform: translateY(-80px);
   }
 }
+/* ---------- 基础导航样式 ---------- */
+.site-header {
+  background-color: #fff;
+  padding: 10px 20px;
+  position: relative;
+  z-index: 100;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-nav a {
+  text-decoration: none;
+  color: #333;
+  margin-left: 20px;
+  font-weight: 500;
+}
+
+/* 汉堡按钮样式 */
+.menu-toggle {
+  display: none; /* 默认隐藏，桌面端 */
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* ---------- 响应式：手机端 ---------- */
+@media (max-width: 768px) {
+  .site-nav {
+    display: none; /* 默认隐藏导航 */
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    top: 60px; /* 根据 header 高度调整 */
+    right: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+
+  .site-nav.active {
+    display: flex; /* 展开导航 */
+  }
+
+  .menu-toggle {
+    display: block; /* 显示汉堡按钮 */
+  }
+}
