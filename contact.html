@@ -51,8 +51,23 @@
       color: #333;
     }
 
+    /* 汉堡菜单样式 */
+    .menu-toggle {
+      display: none;
+      font-size: 2rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    .site-nav {
+      display: flex;
+      gap: 2rem;
+    }
+
     /* Responsive layout */
     @media (max-width: 768px) {
+      /* Contact layout */
       #contact {
         flex-direction: column;
         text-align: center;
@@ -63,6 +78,29 @@
       #contact img {
         width: 100%;
         max-width: 400px;
+      }
+
+      /* 显示汉堡按钮 */
+      .menu-toggle {
+        display: block;
+      }
+
+      /* 移动端导航 */
+      .site-nav {
+        display: none;
+        flex-direction: column;
+        gap: 1rem;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background: #fff;
+        padding: 1rem;
+        border-radius: 0 0 8px 8px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      }
+
+      .site-nav.active {
+        display: flex;
       }
     }
   </style>
@@ -83,6 +121,7 @@
         &#9776;
       </button>
 
+      <!-- 导航 -->
       <nav class="site-nav">
         <a href="index.html">Home</a>
         <a href="index.html#about">About</a>
@@ -150,36 +189,3 @@
   </script>
 </body>
 </html>
-/* 默认隐藏汉堡按钮 */
-.menu-toggle {
-  display: none;
-  font-size: 2rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-/* 移动端显示 */
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-
-  /* 默认隐藏导航，点击按钮显示 */
-  .site-nav {
-    display: none;
-    flex-direction: column;
-    gap: 1rem;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background: #fff;
-    padding: 1rem;
-    border-radius: 0 0 8px 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  }
-
-  .site-nav.active {
-    display: flex;
-  }
-}
