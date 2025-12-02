@@ -70,7 +70,7 @@ body {
   color: #e07b39;
 }
 
-/* ========== Hamburger Button ========== */
+/* ========== Hamburger Button / Mobile Nav ========== */
 .menu-toggle {
   display: none; /* 桌面端隐藏 */
   font-size: 2.2rem;
@@ -83,14 +83,14 @@ body {
   top: 15px;
   right: 0;
   z-index: 200;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .menu-toggle.active {
-  transform: rotate(90deg); /* 可改为 X 动画 */
+  transform: rotate(90deg); /* 点击旋转效果 */
+  color: #e07b39;
 }
 
-/* ========== Responsive Styles ========== */
 @media (max-width: 768px) {
 
   /* Header 调整 */
@@ -121,34 +121,48 @@ body {
     position: absolute;
     top: 60px;
     right: 0;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    padding: 10px 20px;
+    background-color: #f5f0e6;  /* 米色背景 */
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    padding: 1rem 2rem;
     z-index: 150;
 
     /* 默认隐藏 */
+    max-height: 0;
     opacity: 0;
-    visibility: hidden;
-    transform: translateY(-20px);
-    transition: all 0.3s ease;
+    overflow: hidden;
+    transition: max-height 0.4s ease, opacity 0.4s ease;
   }
 
   .site-nav.active {
+    max-height: 500px; /* 根据菜单高度可调整 */
     opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
   }
 
   .site-nav a {
     padding: 0.5rem 0;
-    color: #333;
+    color: #262137;
     text-decoration: none;
     font-weight: 500;
+    font-size: 1.1rem;
+    position: relative;
   }
 
-  .site-nav a:hover {
-    color: #e07b39;
+  /* hover 下划线动画 */
+  .site-nav a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #e07b39;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+  }
+
+  .site-nav a:hover::after {
+    width: 100%;
   }
 }
 
