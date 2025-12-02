@@ -332,42 +332,61 @@ footer .footer-logo {
     transform: translateY(-80px);
   }
 }
-/* 汉堡按钮样式 */
+/* ---------- 汉堡按钮 ---------- */
 .menu-toggle {
-  display: none; /* 默认桌面端隐藏 */
-  font-size: 28px;
+  display: none; /* 桌面端隐藏 */
+  font-size: 2.2rem;
   background: none;
   border: none;
   cursor: pointer;
-
-  /* 新增：固定在右上角 */
+  color: #e07b39;
+  padding: 0.5rem 0.7rem;
   position: absolute;
-  top: 15px;   /* 距离顶部，可根据 header 调整 */
-  right: 20px; /* 距离右边距离 */
-  z-index: 200; /* 确保在导航栏之上 */
+  top: 15px;
+  right: 0; /* 相对于 header-inner */
+  z-index: 200;
+  transition: transform 0.3s ease;
 }
 
-/* 手机端显示 */
+.menu-toggle.active {
+  transform: rotate(90deg); /* 点击变成 X 的动画效果 */
+}
+
+/* ---------- 手机端导航 ---------- */
 @media (max-width: 768px) {
+  .header-inner {
+    position: relative; /* 汉堡按钮相对定位 */
+  }
+
   .menu-toggle {
     display: block;
   }
 
   .site-nav {
-    display: none;
+    display: flex;
     flex-direction: column;
     gap: 10px;
     position: absolute;
-    top: 60px; /* 根据 header 高度调整 */
-    right: 20px;
+    top: 60px; /* header 高度 */
+    right: 0;
     background-color: #fff;
     border: 1px solid #ccc;
     padding: 10px 20px;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* 增加阴影效果 */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    max-height: 0; /* 初始折叠 */
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    z-index: 150;
   }
 
   .site-nav.active {
-    display: flex;
+    max-height: 300px; /* 展开高度，可根据链接数量调整 */
+  }
+
+  .site-nav a {
+    padding: 0.5rem 0;
+    color: #333;
+    text-decoration: none;
   }
 }
