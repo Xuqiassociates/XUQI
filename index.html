@@ -97,3 +97,26 @@
   // 年份脚本保留
   document.getElementById('year').textContent = new Date().getFullYear();
 </script>
+<script>
+  const menuToggle = document.querySelector('.menu-toggle');
+  const siteNav = document.querySelector('.site-nav');
+
+  // 点击汉堡按钮
+  menuToggle.addEventListener('click', () => {
+    siteNav.classList.toggle('active');
+    menuToggle.classList.toggle('active');
+  });
+
+  // 点击导航链接后自动收起
+  siteNav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      if (siteNav.classList.contains('active')) {
+        siteNav.classList.remove('active');
+        menuToggle.classList.remove('active');
+      }
+    });
+  });
+
+  // 年份脚本
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
