@@ -1,18 +1,54 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Contact Us - XUQI Associates</title>
-  <link rel="stylesheet" href="styles.css" />
-  <style>
-    /* Contact section layout */
-    main {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 4rem 2rem;
+<!-- ======= Navigation ======= -->
+<header class="site-header">
+  <div class="header-inner">
+    <!-- 左侧 logo + 网站标题 -->
+    <div class="header-left">
+      <a href="index.html">
+        <img src="assets/Logo" alt="XUQI Associates Logo" class="logo">
+      </a>
+      <h1 class="site-title">XUQI Associates</h1>
+    </div>
+
+    <!-- 汉堡按钮（移动端显示） -->
+    <button class="menu-toggle">☰</button>
+
+    <!-- 导航链接 -->
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="index.html#about">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ======= 汉堡按钮 JS（复制到页面底部 <body> 前） ======= -->
+<script>
+  const menuToggle = document.querySelector('.menu-toggle');
+  const siteNav = document.querySelector('.site-nav');
+
+  menuToggle.addEventListener('click', (e) => {
+    siteNav.classList.toggle('active');
+    menuToggle.classList.toggle('active');
+    e.stopPropagation();
+  });
+
+  siteNav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      siteNav.classList.remove('active');
+      menuToggle.classList.remove('active');
+    });
+  });
+
+  document.addEventListener('click', (e) => {
+    if (siteNav.classList.contains('active') &&
+        !siteNav.contains(e.target) &&
+        !menuToggle.contains(e.target)) {
+      siteNav.classList.remove('active');
+      menuToggle.classList.remove('active');
     }
+  });
+</script>
 
     #contact {
       display: flex;
@@ -112,38 +148,3 @@
   </script>
 </body>
 </html>
-<script>
-  const menuToggle = document.querySelector('.menu-toggle');
-  const siteNav = document.querySelector('.site-nav');
-
-  // 点击汉堡按钮：切换导航
-  menuToggle.addEventListener('click', (e) => {
-    siteNav.classList.toggle('active');
-    menuToggle.classList.toggle('active');
-
-    // 阻止事件冒泡，避免点击按钮时触发 document 点击关闭
-    e.stopPropagation();
-  });
-
-  // 点击导航链接：自动收起
-  siteNav.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      siteNav.classList.remove('active');
-      menuToggle.classList.remove('active');
-    });
-  });
-
-  // 点击页面其他地方：收起导航
-  document.addEventListener('click', (e) => {
-    // 如果导航是打开状态，并且点击目标不是导航或汉堡按钮
-    if (siteNav.classList.contains('active') &&
-        !siteNav.contains(e.target) &&
-        !menuToggle.contains(e.target)) {
-      siteNav.classList.remove('active');
-      menuToggle.classList.remove('active');
-    }
-  });
-
-  // 年份脚本
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
