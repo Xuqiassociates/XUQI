@@ -8,23 +8,8 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Header -->
-  <header class="site-header">
-  <div class="header-inner">
-    <div class="header-left">
-      <a href="landingpage.html">
-        <img src="assets/Logo" alt="XUQI Associates Logo" class="logo">
-      </a>
-      <h1 class="site-title">XUQI Associates</h1>
-    </div>
-  <nav class="site-nav">
-  <a href="index.html">Home</a>
-  <a href="index.html#about">About</a>
-  <a href="projects.html">Projects</a>
-  <a href="contact.html">Contact</a>
-</nav>
-  </div>
-</header>
+  <!-- Navbar Placeholder -->
+  <div id="navbar-placeholder"></div>
 
   <!-- Projects Section -->
   <main class="container">
@@ -71,15 +56,52 @@
   </main>
 
   <!-- Footer -->
-<footer class="site-footer">
-  <div class="container footer-inner">
-    <img src="assets/Logo" alt="XUQI Associates Logo" class="footer-logo">
-    <p>© <span id="year"></span>   XUQI Associates</p>
-  </div>
-</footer>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <img src="assets/Logo" alt="XUQI Associates Logo" class="footer-logo">
+      <p>© <span id="year"></span> XUQI Associates</p>
+    </div>
+  </footer>
 
+  <!-- JS -->
   <script>
+    // 更新年份
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // 加载导航栏
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar-placeholder').innerHTML = data;
+
+        // 汉堡按钮功能
+        const menuToggle = document.querySelector('.menu-toggle');
+        const siteNav = document.querySelector('.site-nav');
+
+        if(menuToggle && siteNav){
+          menuToggle.addEventListener('click', (e) => {
+            siteNav.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+            e.stopPropagation();
+          });
+
+          siteNav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+              siteNav.classList.remove('active');
+              menuToggle.classList.remove('active');
+            });
+          });
+
+          document.addEventListener('click', (e) => {
+            if (siteNav.classList.contains('active') &&
+                !siteNav.contains(e.target) &&
+                !menuToggle.contains(e.target)) {
+              siteNav.classList.remove('active');
+              menuToggle.classList.remove('active');
+            }
+          });
+        }
+      });
   </script>
 </body>
 </html>
