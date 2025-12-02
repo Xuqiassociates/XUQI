@@ -6,6 +6,94 @@
   <title>XUQI Associates - Projects</title>
   <meta name="description" content="XUQI Associates Projects" />
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* 汉堡按钮样式 */
+    .menu-toggle {
+      display: none;
+      font-size: 2rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    /* 移动端显示汉堡菜单 */
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      /* 默认隐藏导航，点击按钮显示 */
+      .site-nav {
+        display: none;
+        flex-direction: column;
+        gap: 1rem;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background: #fff;
+        padding: 1rem;
+        border-radius: 0 0 8px 8px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      }
+
+      .site-nav.active {
+        display: flex;
+      }
+    }
+
+    /* Projects section layout */
+    main {
+      padding: 4rem 2rem;
+    }
+
+    #projects {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    #projects h3 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      color: #262137;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .project {
+      background: #fff7f0;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .project img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    .project-content {
+      padding: 1rem;
+    }
+
+    .project-content h3 {
+      margin-top: 0;
+      font-size: 1.2rem;
+      color: #262137;
+    }
+
+    .project-content p {
+      font-size: 0.95rem;
+      color: #333;
+    }
+  </style>
 </head>
 <body>
   <!-- Header -->
@@ -34,7 +122,7 @@
   </header>
 
   <!-- Projects Section -->
-  <main class="container">
+  <main>
     <section id="projects" class="card">
       <h3>Our Projects</h3>
       <div class="projects-grid">
@@ -90,66 +178,35 @@
     const menuToggle = document.querySelector('.menu-toggle');
     const siteNav = document.querySelector('.site-nav');
 
-    // 点击汉堡按钮：切换导航
-    menuToggle.addEventListener('click', (e) => {
-      siteNav.classList.toggle('active');
-      menuToggle.classList.toggle('active');
-      e.stopPropagation();
-    });
-
-    // 点击导航链接：自动收起
-    siteNav.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        siteNav.classList.remove('active');
-        menuToggle.classList.remove('active');
+    if (menuToggle && siteNav) {
+      // 点击汉堡按钮：切换导航
+      menuToggle.addEventListener('click', (e) => {
+        siteNav.classList.toggle('active');
+        menuToggle.classList.toggle('active');
+        e.stopPropagation();
       });
-    });
 
-    // 点击页面其他地方：收起导航
-    document.addEventListener('click', (e) => {
-      if (siteNav.classList.contains('active') &&
-          !siteNav.contains(e.target) &&
-          !menuToggle.contains(e.target)) {
-        siteNav.classList.remove('active');
-        menuToggle.classList.remove('active');
-      }
-    });
+      // 点击导航链接：自动收起
+      siteNav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          siteNav.classList.remove('active');
+          menuToggle.classList.remove('active');
+        });
+      });
+
+      // 点击页面其他地方：收起导航
+      document.addEventListener('click', (e) => {
+        if (siteNav.classList.contains('active') &&
+            !siteNav.contains(e.target) &&
+            !menuToggle.contains(e.target)) {
+          siteNav.classList.remove('active');
+          menuToggle.classList.remove('active');
+        }
+      });
+    }
 
     // 年份显示
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
-/* 默认隐藏汉堡按钮 */
-.menu-toggle {
-  display: none;
-  font-size: 2rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-/* 移动端显示 */
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-
-  /* 默认隐藏导航，点击按钮显示 */
-  .site-nav {
-    display: none;
-    flex-direction: column;
-    gap: 1rem;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background: #fff;
-    padding: 1rem;
-    border-radius: 0 0 8px 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  }
-
-  .site-nav.active {
-    display: flex;
-  }
-}
