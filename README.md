@@ -22,7 +22,7 @@
     </p>
 
     <div class="border-t border-gray-700 pt-6 text-sm text-gray-500">
-      Contact: info@yourcompany.com
+      Contact: xuqiassociates@outlook.com
     </div>
   </div>
 </body>
