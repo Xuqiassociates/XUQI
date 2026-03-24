@@ -1,20 +1,29 @@
-# 个人网站（静态模版）
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Updating</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-black text-white flex items-center justify-center min-h-screen">
+  <div class="text-center px-6">
+    <div class="animate-pulse mb-6">
+      <h1 class="text-4xl md:text-6xl font-semibold tracking-wide">Coming Soon</h1>
+    </div>
 
-这是一个简单的个人网站静态模板，适合部署到 GitHub Pages。
+    <p class="text-lg md:text-xl text-gray-300 mb-6">
+      Our website is currently being redesigned.
+    </p>
 
-部署方式（任选其一）：
+    <p class="text-gray-400 mb-10">
+      We are working to bring you a better experience.
+      Please check back shortly.
+    </p>
 
-1) 使用 GitHub Pages（推荐）
-- 将文件放到仓库根目录或 docs/ 目录。
-- 进入仓库 Settings → Pages，选择分支（main 或 gh-pages）及目录（/ 或 /docs），保存。
-- 页面通常会在几分钟内通过 https://<你的用户名>.github.io/<仓库名>/ 访问。
-
-2) 使用 GitHub Actions 自动部署到 gh-pages（见 .github/workflows/gh-pages.yml）
-- 该 workflow 会把构建内容推到 gh-pages 分支。启用后，Pages 指向 gh-pages 分支即可。
-
-自定义
-- 修改 index.html 中的文本、链接、图片与样式。
-- 如果想要多页面或使用 SSG（如 Jekyll、Hugo、Eleventy），把当前文件迁移到对应框架下。
-
-联系
-- 如果你想让我把这些文件直接提交到仓库（创建分支 + 提交），告诉我分支名和是否需要我替换现有文件，我可以生成提交内容说明。
+    <div class="border-t border-gray-700 pt-6 text-sm text-gray-500">
+      Contact: info@yourcompany.com
+    </div>
+  </div>
+</body>
+</html>
