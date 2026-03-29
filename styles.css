@@ -166,6 +166,64 @@ body {
   }
 }
 
+.hero-banner {
+  width: 100%;
+  height: 400px; /* 横幅高度，可调整 */
+  background-image: url('assets/banner.jpg'); /* 换成你的图片路径 */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center; /* 垂直居中 */
+  justify-content: center; /* 水平居中 */
+}
+
+/* 半透明黑色覆盖层 */
+.hero-banner .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4); /* 透明度 0.4，可调整 */
+  z-index: 1;
+}
+
+/* 文字层 */
+.banner-text {
+  position: relative; /* 确保文字在 overlay 之上 */
+  color: white;
+  text-align: center;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.7); 
+  z-index: 2;
+  max-width: 90%;
+}
+
+.banner-text h1 {
+  font-size: 2.5rem;
+  margin: 0 0 10px 0;
+}
+
+.banner-text p {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .hero-banner {
+    height: 250px;
+  }
+
+  .banner-text h1 {
+    font-size: 1.8rem;
+  }
+
+  .banner-text p {
+    font-size: 1rem;
+  }
+}
 /* ========== Hero Section ========== */
 .hero {
   min-height: 70vh;
