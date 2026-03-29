@@ -403,3 +403,55 @@ footer .footer-logo {
   .header-left .logo { width: 100px; }
   .header-left .site-title { font-size: 14px; }
 }
+/* ====== CTA 按钮 ====== */
+.cta {
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.btn, .btn.outline {
+  width: 100%;
+  text-align: center;
+}
+
+/* ====== Card 区块 ====== */
+.card {
+  padding: 2rem 1rem;
+}
+
+/* ====== 图片自适应 ====== */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ====== 项目网格调整 ====== */
+.projects-grid {
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+/* ====== 导航菜单（手机端滑出） ====== */
+.site-nav {
+  position: absolute;
+  top: 60px; /* Header 高度 */
+  right: 0;
+  width: 200px;
+  background-color: #fff7f0;
+  flex-direction: column;
+  gap: 0;
+  padding: 1rem;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  z-index: 100;
+}
+
+.site-nav.active {
+  transform: translateX(0);
+}
+
+.menu-toggle {
+  display: block; /* 手机端显示汉堡按钮 */
+}
