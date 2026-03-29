@@ -96,10 +96,15 @@ button, .btn {
   color: #333;
 }
 
-/* ========== Navigation ========== */
+/* ========== Navigation ====== */
 .site-nav {
   display: flex;
-  gap: 2rem;
+  gap: 2rem; /* 网页端横向 */
+  position: relative;
+  flex-direction: row;
+  background-color: transparent;
+  padding: 0;
+  box-shadow: none;
 }
 
 .site-nav a {
@@ -130,9 +135,9 @@ button, .btn {
   width: 100%;
 }
 
-/* ========== Hamburger Button / Mobile Nav ========== */
+/* ========== Hamburger Button / Mobile Nav ====== */
 .menu-toggle {
-  display: none;
+  display: none; /* 默认网页端隐藏 */
   font-size: 2.2rem;
   background: none;
   border: none;
@@ -151,7 +156,7 @@ button, .btn {
   color: #e07b39;
 }
 
-/* ========== Hero Banner ========== */
+/* ========== Hero Banner ====== */
 .hero-banner {
   width: 100%;
   height: 400px;
@@ -162,7 +167,6 @@ button, .btn {
   justify-content: center;
 }
 
-/* ====== Slider ====== */
 .hero-slider {
   position: absolute;
   width: 100%;
@@ -185,7 +189,6 @@ button, .btn {
   opacity: 1;
 }
 
-/* 遮罩层可调透明度 */
 .hero-banner .overlay {
   position: absolute;
   top: 0;
@@ -219,7 +222,7 @@ button, .btn {
   text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
 }
 
-/* ========== Hero Section ========== */
+/* ========== Hero Section ====== */
 .hero {
   min-height: 70vh;
   display: flex;
@@ -247,28 +250,52 @@ button, .btn {
   box-shadow: 0 6px 15px rgba(0,0,0,0.15);
 }
 
-/* ========== CTA 按钮 - 网页端 ====== */
+/* ========== CTA 按钮 ====== */
 .cta {
   display: flex;
   justify-content: center;
   gap: 1rem;
   margin-bottom: 4rem;
-  flex-direction: row; /* 横向排列 */
 }
 
 .btn, .btn.outline {
-  width: auto;       /* 根据文字自适应 */
-  text-align: center;
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease;
 }
 
-/* ========== Projects Grid - 网页端 ====== */
+.btn {
+  background-color: #e07b39;
+  color: #fff;
+  border: none;
+}
+
+.btn:hover {
+  background-color: #c25a17;
+  transform: translateY(-2px);
+}
+
+.btn.outline {
+  background-color: transparent;
+  color: #e07b39;
+  border: 2px solid #e07b39;
+}
+
+.btn.outline:hover {
+  background-color: #e07b39;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* ========== Projects Grid ====== */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
 }
 
-/* ====== Project Card ====== */
 .project {
   border-radius: 8px;
   overflow: hidden;
@@ -302,7 +329,7 @@ button, .btn {
   font-size: 0.95rem;
 }
 
-/* ====== Card Section - 网页端 ====== */
+/* ========== Card Section ====== */
 .card {
   text-align: center;
   max-width: 900px;
@@ -324,7 +351,7 @@ button, .btn {
   line-height: 1.8;
 }
 
-/* ====== Footer ====== */
+/* ========== Footer ====== */
 footer {
   padding: 2rem 4rem;
   text-align: center;
@@ -344,29 +371,17 @@ footer .footer-logo {
   height: auto;
 }
 
-/* ========== Page Transition Animation ========== */
+/* ========== Page Transition Animation ====== */
 .page-transition {
   animation: slideFadeOut 0.8s ease forwards;
 }
 
 @keyframes slideFadeOut {
-  0% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(-80px);
-  }
+  0% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-80px); }
 }
 
-/* ====== 全局图片自适应 ====== */
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* ====== 响应式 - 手机端 ====== */
+/* ====== 响应式 ====== */
 @media (max-width: 768px) {
   body {
     font-size: 15px;
@@ -385,31 +400,30 @@ img {
   .header-left .logo { width: 100px; }
   .header-left .site-title { font-size: 14px; }
 
-  /* ====== CTA 按钮 - 手机端 ====== */
+  /* 手机端 CTA 按钮纵向排列 */
   .cta {
-    flex-direction: column; /* 纵向排列 */
+    flex-direction: column;
     gap: 0.5rem;
     margin-bottom: 2rem;
   }
 
   .btn, .btn.outline {
-    width: 100%;           /* 撑满屏幕宽度 */
-    max-width: 300px;      /* 可选限制最大宽度 */
+    width: 100%;
     text-align: center;
   }
 
-  /* ====== Projects Grid - 手机端 ====== */
+  /* 图片自适应 */
+  img { max-width: 100%; height: auto; }
+
+  /* 项目网格手机端改为单列 */
   .projects-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
 
-  /* ====== Card Section - 手机端 ====== */
-  .card {
-    padding: 2rem 1rem;
-  }
+  /* 导航菜单手机端滑出 */
+  .menu-toggle { display: block; }
 
-  /* ====== 导航菜单（手机端滑出） ====== */
   .site-nav {
     position: absolute;
     top: 60px; /* Header 高度 */
@@ -425,11 +439,5 @@ img {
     z-index: 100;
   }
 
-  .site-nav.active {
-    transform: translateX(0);
-  }
-
-  .menu-toggle {
-    display: block; /* 手机端显示汉堡按钮 */
-  }
+  .site-nav.active { transform: translateX(0); }
 }
