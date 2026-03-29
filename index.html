@@ -49,7 +49,18 @@
     <div class="slide" style="background-image: url('assets/banner2.jpg');"></div>
     <div class="slide" style="background-image: url('assets/banner3.jpg');"></div>
   </div>
+<script>
+  const slides = document.querySelectorAll('.slide');
+  let currentSlide = 0;
 
+  function nextSlide() {
+    slides[currentSlide].classList.remove('active');
+    currentSlide = (currentSlide + 1) % slides.length;
+    slides[currentSlide].classList.add('active');
+  }
+
+  setInterval(nextSlide, 4000); // 每4秒切换
+</script>
   <!-- 文字 -->
   <div class="banner-text">
     <h1>Welcome to XUQI Associates</h1>
