@@ -4,12 +4,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-/* ====== 全局重置 ====== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
 /* ====== 字体导入 ====== */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
@@ -18,17 +12,17 @@
 body {
   font-family: 'Inter', Helvetica, Arial, sans-serif;
   color: #222; /* 深灰色，提升与背景对比 */
-  line-height: 1.68; /* 更舒适的行距 */
-  font-size: 16px; /* 默认字号，保证屏幕清晰 */
-  background-color: #fff7f0; /* 暖奶油色背景 */
-  -webkit-font-smoothing: antialiased; /* 字体抗锯齿 */
+  line-height: 1.68;
+  font-size: 16px;
+  background-color: #fff7f0;
+  -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 /* ====== 全局标题样式 ====== */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Inter', Helvetica, Arial, sans-serif;
-  font-weight: 600; /* 标题加粗，更清晰 */
+  font-weight: 600;
   color: #222;
   line-height: 1.3;
   margin-bottom: 0.5rem;
@@ -36,7 +30,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ====== 段落样式 ====== */
 p {
-  font-weight: 400; 
+  font-weight: 400;
   font-size: 1rem;
   color: #222;
   margin-bottom: 1rem;
@@ -45,7 +39,7 @@ p {
 /* ====== 链接 ====== */
 a {
   font-weight: 500;
-  color: #e07b39; /* 你的品牌橙色 */
+  color: #e07b39;
   text-decoration: none;
   transition: color 0.3s ease;
 }
@@ -59,30 +53,6 @@ button, .btn {
   font-family: 'Inter', Helvetica, Arial, sans-serif;
   font-weight: 600;
   font-size: 1rem;
-}
-
-/* ====== 响应式调整 ====== */
-@media (max-width: 768px) {
-  body {
-    font-size: 15px;
-    line-height: 1.6;
-  }
-
-  h1 {
-    font-size: 1.8rem;
-  }
-  h2 {
-    font-size: 1.5rem;
-  }
-  h3 {
-    font-size: 1.3rem;
-  }
-}
-body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #333;
-  line-height: 1.6;
-  background-color: #fff7f0; /* 暖奶油色背景 */
 }
 
 /* ========== Header ========== */
@@ -137,15 +107,33 @@ body {
   color: #262137;
   font-weight: 500;
   transition: color 0.3s ease;
+  position: relative;
 }
 
 .site-nav a:hover {
   color: #e07b39;
 }
 
+/* hover 下划线动画 */
+.site-nav a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #e07b39;
+  transition: width 0.3s;
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+}
+
+.site-nav a:hover::after {
+  width: 100%;
+}
+
 /* ========== Hamburger Button / Mobile Nav ========== */
 .menu-toggle {
-  display: none; /* 桌面端隐藏 */
+  display: none;
   font-size: 2.2rem;
   background: none;
   border: none;
@@ -160,115 +148,39 @@ body {
 }
 
 .menu-toggle.active {
-  transform: rotate(90deg); /* 点击旋转效果 */
+  transform: rotate(90deg);
   color: #e07b39;
 }
 
-@media (max-width: 768px) {
-
-  /* Header 调整 */
-  .header-inner {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5rem;
-    position: relative;
-  }
-
-  .header-left .logo {
-    width: 100px;
-  }
-
-  .header-left .site-title {
-    font-size: 14px;
-  }
-
-  /* 汉堡按钮显示 */
-  .menu-toggle {
-    display: block;
-  }
-
-  /* 移动端导航 */
-  .site-nav {
-    flex-direction: column;
-    gap: 10px;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    background-color: #f5f0e6;  /* 米色背景 */
-    border-radius: 0 0 12px 12px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
-    padding: 1rem 2rem;
-    z-index: 150;
-
-    /* 默认隐藏 */
-    max-height: 0;
-    opacity: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease, opacity 0.4s ease;
-  }
-
-  .site-nav.active {
-    max-height: 500px; /* 根据菜单高度可调整 */
-    opacity: 1;
-  }
-
-  .site-nav a {
-    padding: 0.5rem 0;
-    color: #262137;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 1.1rem;
-    position: relative;
-  }
-
-  /* hover 下划线动画 */
-  .site-nav a::after {
-    content: "";
-    display: block;
-    width: 0;
-    height: 2px;
-    background: #e07b39;
-    transition: width 0.3s;
-    position: absolute;
-    bottom: -4px;
-    left: 0;
-  }
-
-  .site-nav a:hover::after {
-    width: 100%;
-  }
-}
-
+/* ========== Hero Banner ========== */
 .hero-banner {
   width: 100%;
-  height: 400px; /* 横幅高度，可调整 */
-  background-image: url('assets/banner.jpg'); /* 换成你的图片路径 */
+  height: 400px;
+  background-image: url('assets/banner.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
   display: flex;
-  align-items: center; /* 垂直居中 */
-  justify-content: center; /* 水平居中 */
+  align-items: center;
+  justify-content: center;
 }
 
-/* 半透明黑色覆盖层 */
 .hero-banner .overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.4); /* 透明度 0.4，可调整 */
+  background-color: rgba(0,0,0,0.4);
   z-index: 1;
 }
 
-/* 文字层 */
 .banner-text {
-  position: relative; /* 确保文字在 overlay 之上 */
+  position: relative;
   color: white;
   text-align: center;
-  text-shadow: 1px 1px 6px rgba(0,0,0,0.7); 
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.7);
   z-index: 2;
   max-width: 90%;
 }
@@ -283,20 +195,6 @@ body {
   margin: 0;
 }
 
-/* 响应式调整 */
-@media (max-width: 768px) {
-  .hero-banner {
-    height: 250px;
-  }
-
-  .banner-text h1 {
-    font-size: 1.8rem;
-  }
-
-  .banner-text p {
-    font-size: 1rem;
-  }
-}
 /* ========== Hero Section ========== */
 .hero {
   min-height: 70vh;
@@ -325,6 +223,7 @@ body {
   box-shadow: 0 6px 15px rgba(0,0,0,0.15);
 }
 
+/* ========== CTA 按钮 ====== */
 .cta {
   display: flex;
   justify-content: center;
@@ -458,5 +357,43 @@ footer .footer-logo {
   100% {
     opacity: 0;
     transform: translateY(-80px);
+  }
+}
+
+/* ====== 响应式 ====== */
+@media (max-width: 768px) {
+  body {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  h3 {
+    font-size: 1.3rem;
+  }
+
+  .hero-banner {
+    height: 250px;
+  }
+
+  .banner-text h1 {
+    font-size: 1.8rem;
+  }
+
+  .banner-text p {
+    font-size: 1rem;
+  }
+
+  .header-left .logo {
+    width: 100px;
+  }
+
+  .header-left .site-title {
+    font-size: 14px;
   }
 }
