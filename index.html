@@ -4,143 +4,130 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>XUQI Associates</title>
-  <meta name="description" content="Structural Engineering Services in Cambridge and across the UK" />
+  <meta name="description" content="XUQI Associates Architectural & Structural Engineering Solutions For Extensions, Renovations & New Builds Across the UK" />
 
+  <!-- ===== Styles ===== -->
   <link rel="stylesheet" href="styles.css" />
 
-  <!-- Favicon -->
+  <!-- ===== Favicon ===== -->
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
   <link rel="shortcut icon" href="assets/favicon.ico">
 </head>
 
 <body>
+  <!-- ===== Header ===== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="header-left">
+        <a href="index.html">
+          <img src="assets/Logo.png" alt="XUQI Associates Logo" class="logo">
+        </a>
+        <h1 class="site-title">XUQI Associates</h1>
+      </div>
 
-<!-- ===== Header ===== -->
-<header class="site-header">
-  <div class="container header-inner">
-    <div class="header-left">
-      <a href="index.html">
-        <img src="assets/Logo.png" alt="XUQI Associates Logo" class="logo">
-      </a>
-      <h1 class="site-title">XUQI Associates</h1>
+      <!-- Hamburger / Mobile Menu Button -->
+      <button class="menu-toggle" aria-label="Toggle navigation">
+        &#9776;
+      </button>
+
+      <!-- Navigation -->
+      <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="#about">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== Hero Banner (Slider) ===== -->
+  <section class="hero-banner">
+    <div class="hero-slider">
+      <div class="slide active" style="background-image: url('assets/banner1.jpg');"></div>
+      <div class="slide" style="background-image: url('assets/banner2.jpg');"></div>
     </div>
 
-    <button class="menu-toggle" aria-label="Toggle navigation">
-      &#9776;
-    </button>
+    <div class="banner-text">
+      <h1>XUQI Associates Architectural & Structural Engineering Solutions</h1>
+      <p>For Extensions, Renovations & New Builds Across the UK</p>
 
-    <nav class="site-nav">
-      <a href="index.html">Home</a>
-      <a href="#about">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="services.html">Services</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </div>
-</header>
+      <div class="cta">
+        <a class="btn" href="contact.html">Get a Quote</a>
+        <a class="btn outline" href="services.html">Our Services</a>
+      </div>
+    </div>
+  </section>
 
-<!-- ===== Hero Banner（轮播） ===== -->
-<section class="hero-banner">
-
-  <div class="hero-slider">
-    <div class="slide active" style="background-image: url('assets/banner1.jpg');"></div>
-    <div class="slide" style="background-image: url('assets/banner2.jpg');"></div>
-    <div class="slide" style="background-image: url('assets/banner3.jpg');"></div>
-  </div>
-
-  <div class="overlay"></div>
-
-  <div class="banner-text">
-    <h1>Structural Engineering for Extensions & Renovations</h1>
-    <p>Calculations, steel design & Building Control support across the UK</p>
-
+  <!-- ===== Services Preview ===== -->
+  <section class="card">
+    <h3>Our Services</h3>
+    <p>
+      We provide structural calculations, beam design, load assessments and full support for Building Regulations approval.
+    </p>
     <div class="cta">
-      <a class="btn" href="contact.html">Get a Quote</a>
-      <a class="btn outline" href="services.html">Our Services</a>
+      <a class="btn" href="services.html">View All Services</a>
     </div>
-  </div>
+  </section>
 
-</section>
+  <!-- ===== About Section ===== -->
+  <section id="about" class="card">
+    <h3>About Us</h3>
+    <p>Based in Cambridge, XUQI Associates delivers reliable structural engineering solutions for residential and commercial projects.</p>
+    <p>From extensions and loft conversions to structural alterations, we ensure every project is safe, efficient, and compliant with UK Building Regulations.</p>
+  </section>
 
-<!-- ===== Services Preview ===== -->
-<section class="card">
-  <h3>Our Services</h3>
-  <p>
-    We provide structural calculations, beam design, load assessments and full support for Building Regulations approval.
-  </p>
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <img src="assets/Logo.png" alt="XUQI Associates Logo" class="footer-logo">
+      <p>© <span id="year"></span> XUQI Associates</p>
+    </div>
+  </footer>
 
-  <div class="cta">
-    <a class="btn" href="services.html">View All Services</a>
-  </div>
-</section>
+  <!-- ===== Scripts ===== -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // ===== Mobile Menu =====
+      const menuToggle = document.querySelector('.menu-toggle');
+      const siteNav = document.querySelector('.site-nav');
 
-<!-- ===== About ===== -->
-<section id="about" class="card">
-  <h3>About Us</h3>
-  <p>
-    Based in Cambridge, XUQI Associates delivers reliable structural engineering solutions for residential and commercial projects.
-  </p>
-  <p>
-    From extensions and loft conversions to structural alterations, we ensure every project is safe, efficient, and compliant with UK Building Regulations.
-  </p>
-</section>
+      menuToggle.addEventListener('click', (e) => {
+        siteNav.classList.toggle('active');
+        menuToggle.classList.toggle('active');
+        e.stopPropagation();
+      });
 
-<!-- ===== Footer ===== -->
-<footer class="site-footer">
-  <div class="container footer-inner">
-    <img src="assets/Logo.png" alt="XUQI Associates Logo" class="footer-logo">
-    <p>© <span id="year"></span> XUQI Associates</p>
-  </div>
-</footer>
+      siteNav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          siteNav.classList.remove('active');
+          menuToggle.classList.remove('active');
+        });
+      });
 
-<!-- ===== JS（全部统一在这里） ===== -->
-<script>
-document.addEventListener('DOMContentLoaded', () => {
+      document.addEventListener('click', (e) => {
+        if (siteNav.classList.contains('active') && !siteNav.contains(e.target) && !menuToggle.contains(e.target)) {
+          siteNav.classList.remove('active');
+          menuToggle.classList.remove('active');
+        }
+      });
 
-  // ===== Mobile Menu =====
-  const menuToggle = document.querySelector('.menu-toggle');
-  const siteNav = document.querySelector('.site-nav');
+      // ===== Current Year =====
+      document.getElementById('year').textContent = new Date().getFullYear();
 
-  menuToggle.addEventListener('click', (e) => {
-    siteNav.classList.toggle('active');
-    menuToggle.classList.toggle('active');
-    e.stopPropagation();
-  });
+      // ===== Slider =====
+      const slides = document.querySelectorAll('.slide');
+      let currentSlide = 0;
 
-  siteNav.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      siteNav.classList.remove('active');
-      menuToggle.classList.remove('active');
+      function nextSlide() {
+        slides[currentSlide].classList.remove('active');
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].classList.add('active');
+      }
+
+      setInterval(nextSlide, 4000);
     });
-  });
-
-  document.addEventListener('click', (e) => {
-    if (siteNav.classList.contains('active') &&
-        !siteNav.contains(e.target) &&
-        !menuToggle.contains(e.target)) {
-      siteNav.classList.remove('active');
-      menuToggle.classList.remove('active');
-    }
-  });
-
-  // ===== Year =====
-  document.getElementById('year').textContent = new Date().getFullYear();
-
-  // ===== Slider =====
-  const slides = document.querySelectorAll('.slide');
-  let currentSlide = 0;
-
-  function nextSlide() {
-    slides[currentSlide].classList.remove('active');
-    currentSlide = (currentSlide + 1) % slides.length;
-    slides[currentSlide].classList.add('active');
-  }
-
-  setInterval(nextSlide, 4000);
-
-});
-</script>
-
+  </script>
 </body>
 </html>
