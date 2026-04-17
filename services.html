@@ -1,6 +1,263 @@
 <!DOCTYPE html>
 <html lang="en">
+<head><!DOCTYPE html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services - XUQI Associates</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
+  <link rel="shortcut icon" href="assets/favicon.ico">
+
+  <style>
+    /* ===== GRID ===== */
+    .services-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+      gap:24px;
+      padding:40px 20px;
+      max-width:1200px;
+      margin:0 auto;
+    }
+
+    /* ===== CARD ===== */
+    .service-card{
+      position:relative;
+      display:block;
+      text-decoration:none;
+      color:inherit;
+      background:#fff4e6;
+      border-radius:14px;
+      overflow:hidden;
+      box-shadow:0 6px 20px rgba(0,0,0,0.08);
+      transition:transform 0.3s ease;
+    }
+
+    .service-card:hover{
+      transform:translateY(-6px);
+    }
+
+    /* ICON */
+    .service-icon{
+      position:absolute;
+      top:12px;
+      left:12px;
+      z-index:3;
+      font-size:20px;
+      background:rgba(255,255,255,0.9);
+      padding:6px 8px;
+      border-radius:6px;
+    }
+
+    /* IMAGE */
+    .service-image{
+      height:180px;
+      overflow:hidden;
+    }
+
+    .service-image img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      transition:transform 0.5s ease;
+    }
+
+    .service-card:hover .service-image img{
+      transform:scale(1.05);
+    }
+
+    /* CONTENT */
+    .service-content{
+      padding:16px;
+    }
+
+    .service-content h3{
+      margin:0 0 10px;
+      font-size:18px;
+    }
+
+    .service-content ul{
+      margin:0;
+      padding-left:18px;
+      font-size:14px;
+      line-height:1.5;
+    }
+
+    /* HOVER OVERLAY */
+    .service-overlay{
+      position:absolute;
+      inset:0;
+      background:rgba(0,0,0,0.65);
+      color:#fff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:20px;
+      opacity:0;
+      transition:opacity 0.3s ease;
+    }
+
+    .service-card:hover .service-overlay{
+      opacity:1;
+    }
+
+    /* HEADER */
+    .site-header{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:20px;
+    }
+
+    .logo{
+      height:40px;
+    }
+
+    .site-nav a{
+      margin:0 10px;
+      text-decoration:none;
+      color:#333;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="site-header">
+  <div class="header-left">
+    <a href="landingpage.html">
+      <img src="assets/Logo.png" class="logo" alt="logo">
+    </a>
+  </div>
+
+  <nav class="site-nav">
+    <a href="index.html">Home</a>
+    <a href="projects.html">Projects</a>
+    <a href="services.html"><b>Services</b></a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<!-- ===== HERO ===== -->
+<section style="text-align:center;padding:60px 20px;">
+  <h1>Our Services</h1>
+  <p>Architectural + Structural Engineering Solutions across the UK</p>
+</section>
+
+<!-- ===== SERVICES GRID ===== -->
+<section class="services-grid">
+
+  <!-- 1 -->
+  <a href="service-detail-preconstruction.html" class="service-card">
+    <div class="service-icon">📐</div>
+    <div class="service-image">
+      <img src="assets/service1.jpg">
+    </div>
+    <div class="service-content">
+      <h3>Pre-Construction Services</h3>
+      <ul>
+        <li>Measured Surveys</li>
+        <li>Planning Drawings</li>
+        <li>Building Regulations</li>
+      </ul>
+    </div>
+    <div class="service-overlay">
+      Survey + planning + technical drawings for approvals
+    </div>
+  </a>
+
+  <!-- 2 -->
+  <a href="service-detail-architectural.html" class="service-card">
+    <div class="service-icon">🏠</div>
+    <div class="service-image">
+      <img src="assets/service2.jpg">
+    </div>
+    <div class="service-content">
+      <h3>Architectural Design</h3>
+      <ul>
+        <li>Extensions</li>
+        <li>Loft Conversions</li>
+        <li>Layout Design</li>
+      </ul>
+    </div>
+    <div class="service-overlay">
+      Space planning and architectural design solutions
+    </div>
+  </a>
+
+  <!-- 3 -->
+  <a href="service-detail-structural.html" class="service-card">
+    <div class="service-icon">🏗️</div>
+    <div class="service-image">
+      <img src="assets/service3.jpg">
+    </div>
+    <div class="service-content">
+      <h3>Structural Engineering</h3>
+      <ul>
+        <li>Steel Beams</li>
+        <li>Load Bearing Walls</li>
+        <li>Calculations</li>
+      </ul>
+    </div>
+    <div class="service-overlay">
+      Safe structural design and engineering calculations
+    </div>
+  </a>
+
+  <!-- 4 -->
+  <a href="service-detail-inspections.html" class="service-card">
+    <div class="service-icon">🔍</div>
+    <div class="service-image">
+      <img src="assets/service4.jpg">
+    </div>
+    <div class="service-content">
+      <h3>Inspections & Reports</h3>
+      <ul>
+        <li>Structural Surveys</li>
+        <li>Subsidence</li>
+        <li>Damage Reports</li>
+      </ul>
+    </div>
+    <div class="service-overlay">
+      Structural assessment and defect analysis
+    </div>
+  </a>
+
+  <!-- 5 -->
+  <a href="service-detail-foundations.html" class="service-card">
+    <div class="service-icon">🧱</div>
+    <div class="service-image">
+      <img src="assets/service5.jpg">
+    </div>
+    <div class="service-content">
+      <h3>Foundations & Engineering</h3>
+      <ul>
+        <li>Piles</li>
+        <li>Raft Foundations</li>
+        <li>Ground Solutions</li>
+      </ul>
+    </div>
+    <div class="service-overlay">
+      Foundation design and ground engineering solutions
+    </div>
+  </a>
+
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer style="text-align:center;padding:40px;">
+  <img src="assets/Logo.png" style="height:40px;">
+  <p>© 2026 XUQI Associates</p>
+</footer>
+
+</body>
+</html>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Services - XUQI Associates</title>
