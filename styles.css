@@ -480,31 +480,50 @@ footer .footer-logo {
   100% { opacity: 0; transform: translateY(-80px); }
 }
 
+/* =========================
+   MOBILE FIX (CLEAN VERSION)
+========================= */
 @media (max-width: 768px) {
 
-  /* 防止左右滑动（关键） */
+  /* 防止横向滚动 */
   html, body {
-    overflow-x: hidden;
+    overflow-x: clip;
   }
 
-  /* logo */
+  /* 防止任何元素撑出屏幕 */
+  * {
+    max-width: 100%;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* ===== HEADER ===== */
+  .header-inner {
+    flex-wrap: nowrap;
+  }
+
   .header-left .logo {
-    width: 85px;
+    width: 85px !important;
     height: auto;
   }
 
   .header-left .site-title {
     font-size: 12px;
+    line-height: 1.2;
   }
 
-  /* hamburger */
+  /* ===== HAMBURGER ===== */
   .menu-toggle {
     display: block;
-    z-index: 2000;
     position: relative;
+    z-index: 3000;
   }
 
-  /* NAV（统一用 fixed，不要 absolute） */
+  /* ===== NAV DRAWER ===== */
   .site-nav {
     position: fixed;
     top: 0;
@@ -514,19 +533,20 @@ footer .footer-logo {
     max-width: 80vw;
     height: 100vh;
 
-    background: #fff7f0;
-
     display: flex;
     flex-direction: column;
 
     gap: 1.2rem;
     padding: 80px 20px;
 
+    background: #fff7f0;
+
     transform: translateX(100%);
     transition: transform 0.35s ease;
 
     box-shadow: -10px 0 30px rgba(0,0,0,0.08);
-    z-index: 1500;
+
+    z-index: 2000;
   }
 
   .site-nav.active {
@@ -538,7 +558,7 @@ footer .footer-logo {
     display: block;
   }
 
-  /* service card */
+  /* ===== SERVICE CARD ===== */
   .service-card {
     flex-direction: column;
   }
