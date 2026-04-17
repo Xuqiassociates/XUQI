@@ -485,6 +485,11 @@ footer .footer-logo {
 ========================= */
 @media (max-width: 768px) {
 
+   .hero-subtitle {
+    font-size: 0.95rem;
+  }
+
+}
   /* 防止横向滚动 */
   html, body {
     overflow-x: clip;
