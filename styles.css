@@ -194,24 +194,48 @@ footer {
   padding: 40px;
 }
 
-/* =========================
-   MOBILE (FIXED)
-========================= */
 @media (max-width: 768px) {
 
-  /* 防止横向滑动 */
+  /* =========================
+     GLOBAL SAFETY (IMPORTANT)
+  ========================= */
   html, body {
     overflow-x: hidden;
   }
 
-  /* ===== Hamburger ===== */
+  /* =========================
+     HEADER FIX
+  ========================= */
+  .header-inner {
+    align-items: center;
+  }
+
+  .header-left {
+    max-width: 70%;
+  }
+
+  .header-left .logo {
+    width: 80px;
+    height: auto;
+  }
+
+  .header-left .site-title {
+    font-size: 12px;
+    line-height: 1.2;
+  }
+
+  /* =========================
+     HAMBURGER
+  ========================= */
   .menu-toggle {
     display: block;
     position: relative;
     z-index: 2000;
   }
 
-  /* ===== Mobile Nav Drawer ===== */
+  /* =========================
+     MOBILE NAV
+  ========================= */
   .site-nav {
     position: fixed;
     top: 0;
@@ -239,7 +263,9 @@ footer {
     transform: translateX(0);
   }
 
-  /* ===== Service Card ===== */
+  /* =========================
+     SERVICE CARDS
+  ========================= */
   .service-card {
     flex-direction: column;
   }
