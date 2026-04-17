@@ -481,38 +481,37 @@ footer .footer-logo {
 }
 
 /* =========================
-   MOBILE FIX (CLEAN VERSION)
+   MOBILE FIX (CORRECTED)
 ========================= */
+
 @media (max-width: 768px) {
 
-   .hero-subtitle {
+  /* subtitle */
+  .hero-subtitle {
     font-size: 0.95rem;
   }
 
-}
   /* 防止横向滚动 */
   html, body {
     overflow-x: clip;
   }
 
-  /* 防止任何元素撑出屏幕 */
-  * {
-    max-width: 100%;
-  }
-
-  img {
+  /* 只限制图片，不限制所有元素 */
+  img,
+  video {
     max-width: 100%;
     height: auto;
     display: block;
   }
 
   /* ===== HEADER ===== */
+
   .header-inner {
     flex-wrap: nowrap;
   }
 
   .header-left .logo {
-    width: 85px !important;
+    width: 85px;
     height: auto;
   }
 
@@ -522,6 +521,7 @@ footer .footer-logo {
   }
 
   /* ===== HAMBURGER ===== */
+
   .menu-toggle {
     display: block;
     position: relative;
@@ -529,6 +529,7 @@ footer .footer-logo {
   }
 
   /* ===== NAV DRAWER ===== */
+
   .site-nav {
     position: fixed;
     top: 0;
@@ -564,6 +565,7 @@ footer .footer-logo {
   }
 
   /* ===== SERVICE CARD ===== */
+
   .service-card {
     flex-direction: column;
   }
@@ -576,4 +578,5 @@ footer .footer-logo {
   .service-content {
     padding: 24px 20px;
   }
+
 }
