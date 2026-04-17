@@ -350,133 +350,162 @@ button, .btn {
   margin-bottom: 1rem;
   line-height: 1.8;
 }
-/* ========== SERVICES SECTION (MAGAZINE STYLE UPGRADE) ========== */
+/* =========================
+   SERVICES PAGE - EDITORIAL STYLE
+   ========================= */
 
+/* 全屏结构 */
 .services-grid {
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
-  margin-top: 2rem;
-  max-width: 1100px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0 1.5rem;
+  gap: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-/* ========== SERVICE CARD (HORIZONTAL LAYOUT) ========== */
+/* ===== SERVICE CARD ===== */
 .service-card {
   position: relative;
   display: flex;
   flex-direction: row;
+
+  width: 100%;
+  min-height: 360px;
+
   text-decoration: none;
   color: inherit;
 
-  background: #fff4e6;
-  border-radius: 14px;
   overflow: hidden;
 
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-  min-height: 220px;
+  transition: all 0.4s ease;
 }
 
+/* hover subtle motion */
 .service-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 26px rgba(0,0,0,0.12);
+  transform: translateY(-4px);
 }
 
-/* ========== IMAGE (LEFT SIDE) ========== */
+/* ===== IMAGE (LEFT FULL BLEED FEEL) ===== */
 .service-image {
-  width: 50%;              /* 👈 从40%提升到50% */
-  min-width: 320px;       /* 👈 防止太窄 */
+  flex: 0 0 55%;
   position: relative;
   overflow: hidden;
 
-  aspect-ratio: 16 / 10;  /* ⭐关键：强制16:10比例 */
+  /* ⭐ 关键：统一视觉比例 */
+  aspect-ratio: 16 / 10;
 }
 
-/* image itself */
 .service-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
 
   transition: transform 0.6s ease;
 }
 
 .service-card:hover .service-image img {
-  transform: scale(1.06);
+  transform: scale(1.05);
 }
 
-/* ========== ICON ========== */
-.service-icon {
-  position: absolute;
-  top: 12px;
-  left: 12px;
-  z-index: 3;
-
-  font-size: 18px;
-  background: rgba(255,255,255,0.9);
-  padding: 6px 8px;
-  border-radius: 8px;
-}
-
-/* ========== CONTENT (RIGHT SIDE) ========== */
+/* ===== CONTENT (RIGHT SIDE) ===== */
 .service-content {
   flex: 1;
-  padding: 24px;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  padding: 60px 60px;
+
+  background: #fff7f0;
 }
 
+/* 标题 */
 .service-content h3 {
+  font-size: 1.6rem;
   margin-bottom: 12px;
-  font-size: 1.25rem;
   color: #262137;
+  line-height: 1.3;
 }
 
+/* 描述文字 */
+.service-content p {
+  margin-bottom: 14px;
+  color: #666;
+}
+
+/* list */
 .service-content ul {
   padding-left: 18px;
   margin: 0;
-  font-size: 0.95rem;
-  line-height: 1.6;
   color: #444;
+  line-height: 1.6;
 }
 
 .service-content li {
-  margin-bottom: 4px;
+  margin-bottom: 6px;
 }
 
-/* ========== HOVER OVERLAY ========== */
+/* ===== ICON ===== */
+.service-icon {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+
+  z-index: 3;
+
+  font-size: 18px;
+  background: rgba(255,255,255,0.92);
+  padding: 6px 10px;
+  border-radius: 10px;
+}
+
+/* ===== OVERLAY ===== */
 .service-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.65);
-  color: #fff;
+
+  background: rgba(0,0,0,0.6);
+  color: white;
 
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
 
-  padding: 24px;
+  text-align: center;
+  padding: 40px;
+
   opacity: 0;
   transition: opacity 0.3s ease;
-
-  font-size: 0.95rem;
-  line-height: 1.5;
 }
 
 .service-card:hover .service-overlay {
   opacity: 1;
 }
 
-/* ========== CURSOR ========== */
-.service-card {
-  cursor: pointer;
+/* =========================
+   MOBILE
+   ========================= */
+@media (max-width: 768px) {
+  .service-card {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .service-image {
+    flex: none;
+    width: 100%;
+    aspect-ratio: 16 / 11;
+  }
+
+  .service-content {
+    padding: 28px 20px;
+  }
+
+  .service-content h3 {
+    font-size: 1.3rem;
+  }
 }
 
 /* ========== MOBILE RESPONSIVE ========== */
