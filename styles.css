@@ -350,17 +350,18 @@ button, .btn {
   margin-bottom: 1rem;
   line-height: 1.8;
 }
-/* ========== SERVICES SECTION (MAGAZINE STYLE UPGRADE) ========== */
-/* ========================= SERVICES LAYOUT ========================= */
-
+/* =========================
+   SERVICES LAYOUT
+========================= */
 .services-grid {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
 
-/* ========================= SERVICE CARD ========================= */
-
+/* =========================
+   SERVICE CARD
+========================= */
 .service-card {
   display: flex;
   width: 100%;
@@ -370,7 +371,6 @@ button, .btn {
 }
 
 /* IMAGE */
-
 .service-image {
   flex: 0 0 58%;
   aspect-ratio: 16 / 10;
@@ -384,7 +384,6 @@ button, .btn {
 }
 
 /* CONTENT */
-
 .service-content {
   flex: 1;
   padding: 80px 70px;
@@ -392,7 +391,6 @@ button, .btn {
 }
 
 /* TEXT */
-
 .service-content h3 {
   font-size: 1.8rem;
   margin-bottom: 12px;
@@ -403,18 +401,15 @@ button, .btn {
 }
 
 /* OVERLAY */
-
 .service-overlay {
   position: absolute;
   inset: 0;
   background: rgba(0,0,0,0.55);
   color: #fff;
-
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-
   opacity: 0;
   transition: 0.3s;
 }
@@ -422,6 +417,7 @@ button, .btn {
 .service-card:hover .service-overlay {
   opacity: 1;
 }
+
 /* ========== MOBILE RESPONSIVE ========== */
 @media (max-width: 768px) {
   .service-card {
