@@ -480,63 +480,75 @@ footer .footer-logo {
   100% { opacity: 0; transform: translateY(-80px); }
 }
 
-/* ====== 响应式 ====== */
 @media (max-width: 768px) {
-  body {
-    font-size: 15px;
-    line-height: 1.6;
+
+  /* 防止左右滑动（关键） */
+  html, body {
+    overflow-x: hidden;
   }
 
-  h1 { font-size: 1.8rem; }
-  h2 { font-size: 1.5rem; }
-  h3 { font-size: 1.3rem; }
-
-  .hero-banner { height: 250px; }
-
-  .banner-text h1 { font-size: 2rem; }
-  .banner-text p { font-size: 1rem; }
-
-  .header-left .logo { width: 100px; }
-  .header-left .site-title { font-size: 14px; }
-
-  /* 手机端 CTA 按钮纵向排列 */
-  .cta {
-    flex-direction: column;
-    gap: 0.5rem;
-    margin-bottom: 2rem;
+  /* logo */
+  .header-left .logo {
+    width: 85px;
+    height: auto;
   }
 
-  .btn, .btn.outline {
-    width: 100%;
-    text-align: center;
+  .header-left .site-title {
+    font-size: 12px;
   }
 
-  /* 图片自适应 */
-  img { max-width: 100%; height: auto; }
-
-  /* 项目网格手机端改为单列 */
-  .projects-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+  /* hamburger */
+  .menu-toggle {
+    display: block;
+    z-index: 2000;
+    position: relative;
   }
 
-  /* 导航菜单手机端滑出 */
-  .menu-toggle { display: block; }
-
+  /* NAV（统一用 fixed，不要 absolute） */
   .site-nav {
-    position: absolute;
-    top: 60px; /* Header 高度 */
+    position: fixed;
+    top: 0;
     right: 0;
-    width: 200px;
-    background-color: #fff7f0;
+
+    width: 260px;
+    max-width: 80vw;
+    height: 100vh;
+
+    background: #fff7f0;
+
+    display: flex;
     flex-direction: column;
-    gap: 0;
-    padding: 1rem;
+
+    gap: 1.2rem;
+    padding: 80px 20px;
+
     transform: translateX(100%);
-    transition: transform 0.3s ease;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    z-index: 100;
+    transition: transform 0.35s ease;
+
+    box-shadow: -10px 0 30px rgba(0,0,0,0.08);
+    z-index: 1500;
   }
 
-  .site-nav.active { transform: translateX(0); }
+  .site-nav.active {
+    transform: translateX(0);
+  }
+
+  .site-nav a {
+    width: 100%;
+    display: block;
+  }
+
+  /* service card */
+  .service-card {
+    flex-direction: column;
+  }
+
+  .service-image {
+    width: 100%;
+    aspect-ratio: 16 / 11;
+  }
+
+  .service-content {
+    padding: 24px 20px;
+  }
 }
