@@ -577,8 +577,8 @@ footer .footer-logo {
 }
 
 .banner-text h1 {
-  font-size: 18px;
-  line-height: 1.3;
+  font-size: clamp(18px, 4.5vw, 24px);
+  line-height: 1.2;
   white-space: normal;
   word-break: break-word;
 }
