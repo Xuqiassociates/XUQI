@@ -592,6 +592,47 @@ button, .btn {
 }
 
 /* =========================
+  Privacy Policy
+========================= */
+.card {
+  max-width: 760px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+  text-align: left;
+}
+
+.card h3 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.card h4 {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-top: 2rem;
+  margin-bottom: 0.8rem;
+  color: #444;
+}
+
+.card p {
+  line-height: 1.75;
+  color: rgba(0,0,0,0.75);
+}
+
+.card ul {
+  margin: 0.5rem 0 1.5rem 1.2rem;
+}
+
+.card ul li {
+  margin-bottom: 0.4rem;
+  line-height: 1.6;
+  color: rgba(0,0,0,0.75);
+}
+
+
+
+/* =========================
    MOBILE FIX (CORRECTED)
 ========================= */
 
