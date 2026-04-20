@@ -476,10 +476,10 @@ button, .btn {
 
 /* ===== Footer Base ===== */
 .site-footer {
-  background: #fff7f0;;
-  color: #fff7f0;;
+  background: #faf7f3;
+  color: #1f1f1f;
   padding: 5rem 0 2.5rem;
-  border-top: 1px solid rgba(0,0,0,0.08);
+  border-top: 1px solid rgba(0,0,0,0.06);
   font-size: 14px;
 }
 
