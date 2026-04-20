@@ -289,6 +289,23 @@ button, .btn {
   transform: translateY(-2px);
 }
 
+/* ========== Main Business Sectors ====== */
+.sector-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  list-style: none;
+  padding: 0;
+}
+
+.sector-list li {
+  background: #fff;
+  padding: 14px;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 8px;
+  font-size: 14px;
+}
+
 /* ========== Projects Grid ====== */
 .projects-grid {
   display: grid;
