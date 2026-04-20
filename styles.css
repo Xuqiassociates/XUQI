@@ -290,20 +290,21 @@ button, .btn {
 }
 
 /* ========== Main Business Sectors ====== */
-.sector-list {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
+.service-list {
   list-style: none;
   padding: 0;
+  margin: 0;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 两列 */
+  gap: 12px 40px; /* 行间距 / 列间距 */
 }
 
-.sector-list li {
-  background: #fff;
-  padding: 14px;
-  border: 1px solid rgba(0,0,0,0.08);
-  border-radius: 8px;
-  font-size: 14px;
+.service-list li {
+  font-size: 15px;
+  line-height: 1.4;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
 }
 
 /* ========== Projects Grid ====== */
@@ -604,6 +605,11 @@ footer .footer-logo {
   font-size: 14px;
   line-height: 1.4;
 }
+  /* ===== Main Business Sectors ===== */
+ .service-list {
+  grid-template-columns: 1fr;
+}
+  
   /* ===== SERVICE CARD ===== */
 
   .service-card {
