@@ -478,7 +478,7 @@ button, .btn {
 .site-footer {
   background: #eee6dc;
   color: #1f1f1f;
-  padding: 3rem 0 2.5rem;
+  padding: 2.5rem 0 2rem;
   border-top: 1px solid rgba(0,0,0,0.06);
   font-size: 14px;
 }
@@ -532,8 +532,8 @@ button, .btn {
   align-items: center;
   justify-content: center;
 
-  margin-top: 2.5rem;
-  padding-top: 1.5rem;
+  margin-top: 2rem;
+  padding-top: 1rem;
 
   border-top: 1px solid rgba(0,0,0,0.08);
 
