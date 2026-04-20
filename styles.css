@@ -563,7 +563,30 @@ footer .footer-logo {
     width: 100%;
     display: block;
   }
+/* ===== HERO TEXT FIX (MOBILE) ===== */
 
+.hero-banner {
+  position: relative;
+  overflow: hidden;
+}
+
+.banner-text {
+  width: 90%;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+.banner-text h1 {
+  font-size: 18px;
+  line-height: 1.3;
+  white-space: normal;
+  word-break: break-word;
+}
+
+.banner-text p {
+  font-size: 14px;
+  line-height: 1.4;
+}
   /* ===== SERVICE CARD ===== */
 
   .service-card {
