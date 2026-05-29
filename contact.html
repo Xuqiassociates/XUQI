@@ -34,8 +34,24 @@ main {
   width: 100%;
   max-width: 900px;
   gap: 2rem;
+  overflow: hidden; /* ⭐防止内容撑爆 */
+}
+/* ⭐关键修复：图片不允许失控 */
+#contact img {
+  width: 300px;
+  max-width: 300px;
+  height: auto;
+  object-fit: cover;
+  flex-shrink: 0; /* ⭐防止被压缩或异常拉伸 */
+  border-radius: 12px;
 }
 
+/* ⭐关键修复：flex 文本必须允许收缩 */
+.contact-text {
+  flex: 1;
+  min-width: 0; /* ⭐核心修复点 */
+  text-align: left;
+}
 .contact-text h3 {
   margin-top: 0;
   font-size: 1.8rem;
