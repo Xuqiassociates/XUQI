@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
 /* ========== Global Reset ========== */
 * {
   margin: 0;
@@ -5,13 +7,10 @@
   box-sizing: border-box;
 }
 
-/* ====== 字体导入 ====== */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-
 /* ====== Body 全局字体设置 ====== */
 body {
   font-family: 'Inter', Helvetica, Arial, sans-serif;
-  color: #222;
+  color: #111111;
   line-height: 1.68;
   font-size: 16px;
   background-color: #ffffff;
@@ -28,7 +27,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Inter', Helvetica, Arial, sans-serif;
   font-weight: 600;
-  color: #222;
+  color: #111111;
   line-height: 1.3;
   margin-bottom: 0.5rem;
 }
@@ -37,19 +36,19 @@ h1, h2, h3, h4, h5, h6 {
 p {
   font-weight: 400;
   font-size: 1rem;
-  color: #222;
+  color: #111111;
   margin-bottom: 1rem;
 }
 
 /* ====== 链接 ====== */
 a {
   font-weight: 500;
-  color: #e07b39;
+  color: #3E39FF;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 a:hover {
-  color: #c25a17;
+  color: #2D2AF0;
 }
 
 /* ====== 按钮文本 ====== */
@@ -98,7 +97,7 @@ button, .btn {
   font-size: 16px;
   font-weight: 600;
   margin: 5px 0 0 0;
-  color: #333;
+  color: #333333;
 }
 
 /* ========== Navigation ====== */
@@ -114,14 +113,14 @@ button, .btn {
 
 .site-nav a {
   text-decoration: none;
-  color: #262137;
+  color: #111111;
   font-weight: 500;
   transition: color 0.3s ease;
   position: relative;
 }
 
 .site-nav a:hover {
-  color: #e07b39;
+  color: #3E39FF;
 }
 
 .site-nav a::after {
@@ -129,7 +128,7 @@ button, .btn {
   display: block;
   width: 0;
   height: 2px;
-  background: #e07b39;
+  background: #3E39FF;
   transition: width 0.3s;
   position: absolute;
   bottom: -4px;
@@ -147,7 +146,7 @@ button, .btn {
   background: none;
   border: none;
   cursor: pointer;
-  color: #e07b39;
+  color: #3E39FF;
   padding: 0.5rem 0.7rem;
   position: absolute;
   top: 15px;
@@ -158,7 +157,7 @@ button, .btn {
 
 .menu-toggle.active {
   transform: rotate(90deg);
-  color: #e07b39;
+  color: #3E39FF;
 }
 
 /* ========== Hero Banner ====== */
@@ -208,7 +207,7 @@ button, .btn {
   position: relative;
   color: white;
   text-align: center;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+  text-shadow: 1px 1px 3px rgba(62, 57, 255, 0.3);
   z-index: 2;
   max-width: 90%;
 }
@@ -224,7 +223,7 @@ button, .btn {
   font-size: 1.2rem;
   margin: 0;
   color: #ffffff;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+  text-shadow: 1px 1px 2px rgba(62, 57, 255, 0.3);
 }
 
 /* ========== Hero Section ====== */
@@ -272,24 +271,24 @@ button, .btn {
 }
 
 .btn {
-  background-color: #e07b39;
+  background-color: #3E39FF;
   color: #fff;
   border: none;
 }
 
 .btn:hover {
-  background-color: #c25a17;
+  background-color: #2D2AF0;
   transform: translateY(-2px);
 }
 
 .btn.outline {
   background-color: transparent;
-  color: #e07b39;
-  border: 2px solid #e07b39;
+  color: #3E39FF;
+  border: 2px solid #3E39FF;
 }
 
 .btn.outline:hover {
-  background-color: #e07b39;
+  background-color: #3E39FF;
   color: #fff;
   transform: translateY(-2px);
 }
@@ -322,13 +321,14 @@ button, .btn {
 .project {
   border-radius: 8px;
   overflow: hidden;
-  background-color: #fff4e6;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background-color: #FFFFFF;
+transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid #EAEBFF;
 }
 
 .project:hover {
   transform: translateY(-4px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 10px rgba(62, 57, 255, 0.08);
 }
 
 .project img {
@@ -344,11 +344,11 @@ button, .btn {
 .project-content h3 {
   margin-top: 0.5rem;
   font-size: 1.2rem;
-  color: #262137;
+  color: #111111;
 }
 
 .project-content p {
-  color: #555;
+  color: #111111;
   font-size: 0.95rem;
 }
 
@@ -362,14 +362,14 @@ button, .btn {
 
 .card h3 {
   font-size: 2.2rem;
-  color: #262137;
+  color: #111111;
   margin-bottom: 1rem;
   font-weight: 700;
 }
 
 .card p {
   font-size: 1.1rem;
-  color: #555;
+  color: #111111;
   margin-bottom: 1rem;
   line-height: 1.8;
 }
@@ -429,7 +429,7 @@ button, .btn {
 .service-content {
   flex: 1;
   padding: 80px 70px;
-  background: #fffaf6;
+  background: #FFFFFF;
 }
 
 /* TEXT */
@@ -446,8 +446,8 @@ button, .btn {
 .service-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.55);
-  color: #fff;
+  background: rgba(62, 57, 255, 0.55);
+  color: #FFFFFF;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -476,10 +476,10 @@ button, .btn {
 
 /* ===== Footer Base ===== */
 .site-footer {
-  background: #eee6dc;
-  color: #1f1f1f;
+  background: #FFFFFF;
+  color: #111111;
   padding: 2.5rem 0 2rem;
-  border-top: 1px solid rgba(0,0,0,0.06);
+  border-top: 1px solid rgba(62, 57, 255, 0.06);
   font-size: 14px;
 }
 
@@ -499,12 +499,12 @@ button, .btn {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   margin-bottom: 1rem;
-  color: #111;
+  color: #111111;
 }
 
 .footer-col p {
   line-height: 1.6;
-  color: rgba(0,0,0,0.65);
+  color: rgba(17, 17, 17, 0.65);
   margin: 0 0 0.6rem 0;
 }
 
@@ -516,12 +516,12 @@ button, .btn {
 
 .footer-col ul li {
   margin-bottom: 0.6rem;
-  color: rgba(0,0,0,0.65);
+  color: rgba(17, 17, 17, 0.65);
   transition: 0.2s ease;
 }
 
 .footer-col ul li:hover {
-  color: #000;
+  color: #3E39FF;
   cursor: pointer;
 }
 
@@ -535,10 +535,10 @@ button, .btn {
   margin-top: 2rem;
   padding-top: 1rem;
 
-  border-top: 1px solid rgba(0,0,0,0.08);
+  border-top: 1px solid rgba(62, 57, 255, 0.08);
 
   font-size: 12px;
-  color: rgba(0,0,0,0.5);
+  color: rgba(17, 17, 17, 0.5);
   gap: 1rem;
   text-align: center;
 }
@@ -551,13 +551,13 @@ button, .btn {
 }
 /* ===== Footer link ===== */
 .footer-col ul li a {
-  color: rgba(0,0,0,0.65);
+  color: rgba(17, 17, 17, 0.65);
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .footer-col ul li a:hover {
-  color: #000;
+  color: #3E39FF;
 }
 
 /* ===== Responsive ===== */
@@ -619,14 +619,14 @@ button, .btn {
   letter-spacing: 0.08em;
   margin-top: 2.2rem;
   margin-bottom: 0.8rem;
-  color: rgba(0, 0, 0, 0.7);
+  color: rgba(17, 17, 17, 0.7);
 }
 
 /* Paragraphs */
 .card.legal p {
   line-height: 1.75;
   font-size: 1rem;
-  color: rgba(0, 0, 0, 0.78);
+  color: rgba(17, 17, 17, 0.78);
   margin-bottom: 1rem;
 }
 
@@ -639,13 +639,13 @@ button, .btn {
 .card.legal ul li {
   margin-bottom: 0.5rem;
   line-height: 1.6;
-  color: rgba(0, 0, 0, 0.75);
+  color: rgba(17, 17, 17, 0.75);
 }
 
 /* Strong text (emails, emphasis) */
 .card.legal strong {
   font-weight: 600;
-  color: rgba(0, 0, 0, 0.9);
+  color: rgba(17, 17, 17, 0.9);
 }
 
 /* Contact block spacing */
@@ -710,6 +710,7 @@ button, .btn {
     display: block;
     position: relative;
     z-index: 3000;
+    color: #3E39FF; /* (保持皇家蓝) */
   }
 
   /* ===== NAV DRAWER ===== */
@@ -746,6 +747,7 @@ button, .btn {
   .site-nav a {
     width: 100%;
     display: block;
+    color: #111111; /* (修改) 炭黑 */
   }
 /* ===== HERO TEXT FIX (MOBILE) ===== */
 
@@ -765,11 +767,13 @@ button, .btn {
   line-height: 1.2;
   white-space: normal;
   word-break: break-word;
+  text-shadow: 1px 1px 3px rgba(62, 57, 255, 0.3); /* (修改) 皇家蓝阴影 */
 }
 
 .banner-text p {
   font-size: 14px;
   line-height: 1.4;
+  text-shadow: 1px 1px 2px rgba(62, 57, 255, 0.3); /* (修改) 皇家蓝阴影 */
 }
   /* ===== Main Business Sectors ===== */
  .service-list {
@@ -789,6 +793,7 @@ button, .btn {
 
   .service-content {
     padding: 24px 20px;
+    background: #FFFFFF; /* (修改) 移动端服务卡背景纯白 */
   }
 
 }
