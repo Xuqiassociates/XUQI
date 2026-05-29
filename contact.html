@@ -11,71 +11,64 @@
 <link rel="shortcut icon" href="assets/favicon.ico">
   <style>
     /* Contact section layout */
-    main {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 4rem 2rem;
-    }
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 2rem;
+  background-color: #f8fafc;
+}
 
-    #contact {
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      background-color: #fff7f0;
-      border-radius: 16px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      width: 100%;
-      max-width: 900px;
-      gap: 2rem;
-    }
+#contact {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 
-    #contact img {
-      width: 300px;
-      height: auto;
-      border-radius: 12px;
-      object-fit: cover;
-    }
+  background-color: #ffffff; /* ❗统一为白卡片 */
+  border-radius: 16px;
 
-    .contact-text {
-      flex: 1;
-      text-align: left;
-    }
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08); /* ❗更现代阴影 */
 
-    .contact-text h3 {
-      margin-top: 0;
-      font-size: 1.8rem;
-      color: #262137;
-    }
+  border: 1px solid #e2e8f0; /* ❗加边框层次 */
 
-    .contact-text p {
-      margin: 0.5rem 0;
-      font-size: 1rem;
-      color: #333;
-    }
+  width: 100%;
+  max-width: 900px;
+  gap: 2rem;
+}
 
-    /* Responsive layout */
-    @media (max-width: 768px) {
-      main {
-        flex-direction: column;
-        padding: 2rem 1rem;
-      }
+.contact-text h3 {
+  margin-top: 0;
+  font-size: 1.8rem;
+  color: #0f172a; /* ❗统一主标题色 */
+}
 
-      #contact {
-        flex-direction: column;
-        text-align: center;
-        gap: 1rem;
-      }
+.contact-text p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  color: #475569; /* ❗统一次级文字 */
+}
 
-      #contact img {
-        width: 100%;
-        max-width: 400px;
-      }
+/* mobile 不改结构，只优化颜色一致性 */
+@media (max-width: 768px) {
 
-      .contact-text {
-        text-align: center;
-      }
-    }
+  main {
+    background-color: #f8fafc;
+  }
+
+  #contact {
+    background-color: #ffffff;
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+    border: 1px solid #e2e8f0;
+  }
+
+  .contact-text h3 {
+    color: #0f172a;
+  }
+
+  .contact-text p {
+    color: #475569;
+  }
+}
   </style>
 </head>
 <body>
