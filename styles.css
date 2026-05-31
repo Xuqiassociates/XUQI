@@ -264,39 +264,39 @@ button, .btn {
   justify-content: center;
   gap: 1rem;
 
-  /* ✔ 统一 spacing */
+  /* ⭐关键：把按钮从 hero 里“拉出来” */
   margin: 2rem auto 4rem auto;
 
-  /* ✔ 层级（避免被 hero banner 覆盖） */
-  position: relative;
-  z-index: 5;
-
+  /* ⭐让它更像 section divider */
   width: 100%;
 }
 
-.btn {
-  background-color: #e5e7eb;   /* 浅灰 */
-  color: #111827;              /* 深灰字 */
-  border: 1px solid #d1d5db;
+.btn, .btn.outline { 
+  padding: 0.65rem 1.25rem; 
+  border-radius: 10px; 
+  text-decoration: none; 
+  cursor: pointer; 
+  transition: all 0.25s ease;
 }
-
+.btn { 
+  background-color: #4f46e5;
+  color: #fff;
+  border: none; 
+} 
 .btn:hover {
-  background-color: #d1d5db;
-  color: #111827;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-}
-
-.btn.outline {
+  background-color: #4338ca; 
+  transform: translateY(-2px); 
+  box-shadow: 0 10px 30px rgba(79,70,229,0.25);
+} 
+.btn.outline { 
   background-color: transparent;
-  color: #374151;
-  border: 1px solid #d1d5db;
-}
-
+  color: #4f46e5; 
+  border: 1px solid #c7d2fe; 
+} 
 .btn.outline:hover {
-  background-color: #f3f4f6;
-  color: #111827;
-  border-color: #d1d5db;
+  background-color: #4f46e5;
+  color: #fff;
+  border-color: #4f46e5; 
 }
 
 /* ========== Main Business Sectors ====== */
