@@ -231,22 +231,21 @@ button, .btn {
   position: relative;
 }
 
-.banner-text {
-  text-align: center;
-  max-width: 900px;
-  margin: 3rem auto 2rem auto; /* ⭐从 hero 下方自然流动 */
-  padding: 0 2rem;
+/* 标题 */
+.banner-text h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
   color: #0f172a;
-  position: relative;
+  margin-bottom: 0.5rem;
 }
 
-.banner-text {
-  text-align: center;
-  max-width: 900px;
-  margin: 3rem auto 2rem auto; /* ⭐从 hero 下方自然流动 */
-  padding: 0 2rem;
-  color: #0f172a;
-  position: relative;
+/* 副标题 */
+.banner-text p {
+  font-size: 1.1rem;
+  color: #475569;
+  margin-top: 0.5rem;
 }
 
 /* ========== CTA (NOW NORMAL SECTION BELOW BANNER TEXT) ====== */
