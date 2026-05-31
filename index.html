@@ -139,10 +139,10 @@
   </div>
 
   <!-- 中央文字 -->
-  <div class="landing-text" onclick="home.html">XUQI ASSOCIATES</div> <!-- RED: 新增 onclick 调用 goHome -->
+  <div class="landing-text" onclick="goHome()">XUQI ASSOCIATES</div> <!-- RED: 新增 onclick 调用 goHome -->
 
   <!-- logo -->
-  <div class="landing-logo" onclick="home.html"> <!-- RED: 新增 onclick 调用 goHome -->
+  <div class="landing-logo" onclick="goHome()"> <!-- RED: 新增 onclick 调用 goHome -->
     <img src="assets/Logo.png" alt="XUQI Associates Logo">
   </div>
 
@@ -223,7 +223,7 @@ document.addEventListener('touchend', (e) => {
 function startPageTransition() {
   document.body.classList.add('page-transition');
   setTimeout(() => {
-    window.location.href = 'home.html';
+    window.location.href = 'index.html';
   }, 800);
 }
 </script>
