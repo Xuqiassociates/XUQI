@@ -222,30 +222,33 @@ button, .btn {
 }
 
 /* ========== HERO CONTENT (NOW OUTSIDE IMAGE CONTEXT) ====== */
-.banner-text {
-  text-align: center;
-  max-width: 900px;
-  margin: 3rem auto 2rem auto; /* ⭐从 hero 下方自然流动 */
-  padding: 0 2rem;
-  color: #0f172a;
-  position: relative;
-}
-
-/* 标题 */
 .banner-text h1 {
-  font-size: 3rem;
-  font-weight: 700;
+  font-size: 2.2rem;   /* 原来 3.2rem → 明显收小 */
+  font-weight: 600;
   line-height: 1.2;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
   color: #0f172a;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.6rem;
 }
 
-/* 副标题 */
-.banner-text p {
-  font-size: 1.1rem;
+/* 第二行：主副标题之间要有 hierarchy */
+.banner-text h1 + h1 {
+  font-size: 1.1rem;   /* ⭐第二行变“说明文字级别” */
+  font-weight: 400;
   color: #475569;
-  margin-top: 0.5rem;
+  margin-top: 0.2rem;
+}
+
+/* 如果你现在其实是用 p 放第二行，就用这个 */
+.banner-text p {
+  font-size: 1.05rem;
+  font-weight: 400;
+  color: #475569;
+  margin-top: 0.4rem;
+  line-height: 1.6;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* ========== CTA (NOW NORMAL SECTION BELOW BANNER TEXT) ====== */
