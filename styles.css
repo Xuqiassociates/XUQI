@@ -329,14 +329,6 @@ button, .btn {
   color: rgba(255, 255, 255, 0.85);
 }
 
-.tile-text h2 {
-  font-size: clamp(2rem, 4vw, 4rem);
-  line-height: 1;
-  font-weight: 500;
-  margin: 0;
-  color: #ffffff;
-}
-
 .image-tile:hover img {
   transform: scale(1.05);
 }
