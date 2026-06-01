@@ -271,22 +271,7 @@ button, .btn {
   transform: translateY(-2px);
 }
 
-/* ========== Main Business Sectors ====== */
-.service-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 12px 40px;
-}
 
-.service-list li {
-  font-size: 15px;
-  line-height: 1.6;
-  padding: 10px 0;
-  border-bottom: 1px solid #e2e8f0;
-}
 
 /* ========== Projects Grid ====== */
 .projects-grid {
