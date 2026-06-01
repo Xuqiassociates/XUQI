@@ -271,7 +271,80 @@ button, .btn {
   transform: translateY(-2px);
 }
 
+/* ========== Image Navigation Grid / Homepage ====== */
 
+.image-nav-section {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 6rem 4rem;
+}
+
+.image-nav-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.image-tile {
+  position: relative;
+  display: block;
+  height: 480px;
+  overflow: hidden;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.image-tile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.8s ease;
+}
+
+.tile-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.55),
+    rgba(0, 0, 0, 0.05)
+  );
+  z-index: 1;
+}
+
+.tile-text {
+  position: absolute;
+  left: 2rem;
+  bottom: 2rem;
+  z-index: 2;
+}
+
+.tile-text span {
+  display: block;
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.tile-text h2 {
+  font-size: clamp(2rem, 4vw, 4rem);
+  line-height: 1;
+  font-weight: 500;
+  margin: 0;
+  color: #ffffff;
+}
+
+.image-tile:hover img {
+  transform: scale(1.05);
+}
+
+.contact-tile {
+  grid-column: 1 / -1;
+  height: 420px;
+}
 
 /* ========== Projects Grid ====== */
 .projects-grid {
@@ -768,11 +841,25 @@ button, .btn {
     text-shadow: 0 2px 8px rgba(15, 23, 42, 0.25);
   }
 
-  /* ===== Main Business Sectors ===== */
-  .service-list {
-    grid-template-columns: 1fr;
-  }
+.image-nav-section {
+  padding: 4rem 1.5rem;
+}
 
+.image-nav-grid {
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.image-tile,
+.contact-tile {
+  height: 320px;
+  grid-column: auto;
+}
+
+.tile-text {
+  left: 1.5rem;
+  bottom: 1.5rem;
+}
   /* ===== SERVICE CARD ===== */
 
   .service-card {
