@@ -489,7 +489,7 @@ button, .btn {
 
 .service-card {
   position: relative;
-  min-height: 320px;
+  min-height: 520px;
   padding: 2rem;
   background: #ffffff;
   border: 1px solid #e2e8f0;
@@ -508,13 +508,14 @@ button, .btn {
 
 .service-card-overlay {
   position: absolute;
-  top: 4.2rem;
-  left: 2rem;
-  width: 150px;
-  height: 105px;
+  top: 5rem;
+  left: 1rem;
+  right: 1rem;
+  width: auto;
+  height: 150px;
   object-fit: cover;
   display: block;
-  opacity: 0.75;
+  opacity: 0.82;
   z-index: 1;
 }
 
