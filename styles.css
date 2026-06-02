@@ -488,21 +488,39 @@ button, .btn {
 }
 
 .service-card {
+  position: relative;
   min-height: 320px;
   padding: 2rem;
   background: #ffffff;
   border: 1px solid #e2e8f0;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
 .service-card span {
+  position: relative;
+  z-index: 2;
   font-size: 0.78rem;
   color: #94a3b8;
 }
 
+.service-card-overlay {
+  position: absolute;
+  top: 4.2rem;
+  left: 2rem;
+  width: 150px;
+  height: 105px;
+  object-fit: cover;
+  display: block;
+  opacity: 0.75;
+  z-index: 1;
+}
+
 .service-card h4 {
+  position: relative;
+  z-index: 2;
   margin: auto 0 1rem;
   font-size: 1.45rem;
   font-weight: 500;
@@ -511,6 +529,8 @@ button, .btn {
 }
 
 .service-card p {
+  position: relative;
+  z-index: 2;
   margin: 0;
   font-size: 0.95rem;
   line-height: 1.75;
