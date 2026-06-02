@@ -484,26 +484,65 @@ button, .btn {
 .service-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.2rem;
+  gap: 1.5rem;
 }
 
 .service-card {
-  min-height: 320px;
-  padding: 2rem;
+  min-height: 520px;
   background: #ffffff;
-  border: 1px solid #e2e8f0;
+  border: 1px solid #dbe3ea;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  overflow: hidden;
 }
 
-.service-card span {
+/* 图片区域 */
+.service-card-visual {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  background: #eef2f5;
+}
+
+/* 图片 */
+.service-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* 数字 overlay 在图片上 */
+.service-card-visual span {
+  position: absolute;
+  top: 1.6rem;
+  left: 1.6rem;
+  z-index: 2;
   font-size: 0.78rem;
+  font-weight: 400;
   color: #94a3b8;
+  letter-spacing: 0.04em;
+}
+
+/* 如果想让数字更清楚一点，可加一点淡底
+.service-card-visual span {
+  background: rgba(255,255,255,0.65);
+  padding: 0.15rem 0.35rem;
+  border-radius: 2px;
+}
+*/
+
+.service-card-content {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  flex: 1;
 }
 
 .service-card h4 {
-  margin: auto 0 1rem;
+  margin: 0 0 1rem;
   font-size: 1.45rem;
   font-weight: 500;
   letter-spacing: -0.03em;
