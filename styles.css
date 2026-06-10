@@ -45,12 +45,12 @@ p {
 /* ====== 链接 ====== */
 a {
   font-weight: 500;
-  color: #4f46e5;
+  color: #526D82;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 a:hover {
-  color: #4338ca;
+  color: #3F5668;
 }
 
 /* ====== 按钮文本 ====== */
@@ -901,7 +901,7 @@ button, .btn {
   margin-top: 2.5rem;
   padding-top: 1.5rem;
 
-  border-top: 1px solid rgba(79, 70, 229, 0.12);
+  border-top: 1px solid rgba(82, 109, 130, 0.18);
 
   font-size: 12px;
   color: #94a3b8;
@@ -1098,7 +1098,7 @@ button, .btn {
     display: block;
     position: relative;
     z-index: 3000;
-    color: #4f46e5; /* upgraded indigo */
+    color: #526D82;
   }
 
   /* ===== NAV DRAWER ===== */
@@ -1229,8 +1229,8 @@ button, .btn {
   inset: 0;
   background: linear-gradient(
     to top,
-    rgba(15, 23, 42, 0.72),
-    rgba(15, 23, 42, 0.18)
+      rgba(82, 109, 130, 0.72),
+    rgba(82, 109, 130, 0.18)
   );
 }
 
@@ -1262,6 +1262,7 @@ button, .btn {
   line-height: 0.95;
   letter-spacing: -0.06em;
   font-weight: 300;
+  color: #ffffff;
 }
 
 .planning-hero-content p {
@@ -1327,11 +1328,11 @@ button, .btn {
   font-size: 0.85rem;
 }
 
-.planning-card h3 {
-  margin: 0 0 1rem;
-  font-size: 1.25rem;
-  font-weight: 400;
-  letter-spacing: -0.02em;
+.process-item h3 {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: #ffffff;
 }
 
 .planning-card p {
