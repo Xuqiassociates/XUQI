@@ -403,7 +403,7 @@ button, .btn {
 }
 
 .intro-button:hover {
-  background: #0f172a;
+  background: #526D82;
   color: #ffffff;
 }
 
@@ -449,8 +449,8 @@ button, .btn {
 }
 
 .intro-hero-panel a.panel-line:hover p {
-  color: #0f172a;
-  opacity: 0.65;
+  color: #526D82;
+  opacity: 0.8;
 }
 
 .intro-hero-panel a.panel-line:hover span {
@@ -577,7 +577,7 @@ button, .btn {
 .intro-cta-new {
   margin: 0 auto;
   padding: 6rem 4rem;
-  background: #0f172a;
+  background: #526D82;
   color: #ffffff;
   text-align: center;
 }
@@ -606,7 +606,7 @@ button, .btn {
 
 .intro-button.light:hover {
   background: #ffffff;
-  color: #0f172a;
+  color: #526D82;
 }
 
 
@@ -810,7 +810,7 @@ button, .btn {
 .service-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(79, 70, 229, 0.85); /* ⭐更现代 Indigo overlay */
+  background: rgba(82, 109, 130, 0.88);  
   color: #ffffff;
   display: flex;
   align-items: center;
@@ -1211,7 +1211,7 @@ button, .btn {
   display: flex;
   align-items: flex-end;
   overflow: hidden;
-  background: #111827;
+  background: #526D82;
 }
 
 .planning-hero-image {
@@ -1342,7 +1342,7 @@ button, .btn {
 }
 
 .planning-process {
-  background: #0f172a;
+  background: #526D82;
   color: #fff;
   padding: 7rem 4rem;
 }
@@ -1441,8 +1441,8 @@ button, .btn {
 .planning-cta-button {
   display: inline-block;
   padding: 0.95rem 1.8rem;
-  border: 1px solid #0f172a;
-  color: #0f172a;
+  border: 1px solid #526D82;
+  color: #526D82;
   text-decoration: none;
   font-size: 0.9rem;
   letter-spacing: 0.04em;
@@ -1450,7 +1450,7 @@ button, .btn {
 }
 
 .planning-cta-button:hover {
-  background: #0f172a;
+  background: #526D82;
   color: #fff;
 }
 
