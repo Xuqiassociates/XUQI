@@ -3,199 +3,298 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Contact Us - XUQI Associates</title>
+
+  <title>Contact | XUQI Associates</title>
+  <meta name="description" content="Contact XUQI Associates for architectural design, planning applications, building regulations and structural engineering support across the UK." />
+
   <link rel="stylesheet" href="styles.css" />
+
   <!-- Tab Logo / Favicon -->
-<link rel="icon" href="assets/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
-<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
-<link rel="manifest" href="assets/site.webmanifest">
-  <style>
-    /* Contact section layout */
-main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 4rem 2rem;
-  background-color: #f8fafc;
-}
-
-#contact {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-
-  background-color: #ffffff; /* ❗统一为白卡片 */
-  border-radius: 16px;
-
-  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08); /* ❗更现代阴影 */
-
-  border: 1px solid #e2e8f0; /* ❗加边框层次 */
-
-  width: 100%;
-  max-width: 900px;
-  gap: 2rem;
-  overflow: hidden; /* ⭐防止内容撑爆 */
-}
-/* ⭐关键修复：图片不允许失控 */
-#contact img {
-  width: 300px;
-  max-width: 300px;
-  height: auto;
-  object-fit: cover;
-  flex-shrink: 0; /* ⭐防止被压缩或异常拉伸 */
-  border-radius: 12px;
-}
-
-/* ⭐关键修复：flex 文本必须允许收缩 */
-.contact-text {
-  flex: 1;
-  min-width: 0; /* ⭐核心修复点 */
-  text-align: left;
-}
-.contact-text h3 {
-  margin-top: 0;
-  font-size: 1.8rem;
-  color: #0f172a; /* ❗统一主标题色 */
-}
-
-.contact-text p {
-  margin: 0.5rem 0;
-  font-size: 1rem;
-  color: #475569; /* ❗统一次级文字 */
-}
-
-/* mobile 不改结构，只优化颜色一致性 */
-@media (max-width: 768px) {
-
-  main {
-    background-color: #f8fafc;
-  }
-
-  #contact {
-    background-color: #ffffff;
-    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
-    border: 1px solid #e2e8f0;
-  }
-
-  .contact-text h3 {
-    color: #0f172a;
-  }
-
-  .contact-text p {
-    color: #475569;
-  }
-}
-  </style>
+  <link rel="icon" href="assets/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+  <link rel="manifest" href="assets/site.webmanifest">
 </head>
+
 <body>
-  <!-- Header -->
-<header class="site-header">
-  <div class="container header-inner">
-    <div class="header-left">
-      <a href="index.html">
-        <img src="assets/Logo.png" alt="XUQI Associates Logo" class="logo">
-      </a>
-    </div>
 
-    <!-- 新增：汉堡菜单按钮 -->
-    <button class="menu-toggle" aria-label="Toggle navigation">
-      &#9776;
-    </button>
+  <!-- ===== Header ===== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="header-left">
+        <a href="index.html">
+          <img src="assets/Logo.png" alt="XUQI Associates Logo" class="logo">
+        </a>
+      </div>
 
-    <!-- 原本的导航（未删改） -->
+      <button class="menu-toggle" aria-label="Toggle navigation">
+        &#9776;
+      </button>
+
       <nav class="site-nav">
         <a href="home.html">Home</a>
         <a href="Intro.html">About</a>
         <a href="projects.html">Projects</a>
         <a href="services.html">Services</a>
-        <a href="contact.html">Contact</a>
+        <a href="contact.html" class="active">Contact</a>
       </nav>
     </div>
   </header>
 
-  <!-- Contact Section -->
-  <main>
-    <section id="contact" class="card">
-      <img src="assets/Contactus.jpeg" alt="Contact Us Image">
-      <div class="contact-text">
-        <h3>Contact Us</h3>
-        <p>Email: xuqiassociates@outlook.com</p>
-        <p>Rednote: 26213729842</p>
-        <p>Wechat: Gomm_1001</p>
-        <p>Phone: 7879286156</p>        
+
+  <!-- ===== Contact Page ===== -->
+  <main class="contact-page-new">
+
+    <!-- ===== Contact Hero ===== -->
+    <section class="contact-hero-new">
+
+      <div class="contact-hero-text">
+        <p class="contact-eyebrow">Contact</p>
+
+        <h1>
+          Start with a clear conversation.
+        </h1>
+
+        <p>
+          Tell us about your property, your project stage and the type of support you need.
+          We can help identify the right architectural or structural route forward.
+        </p>
       </div>
+
+      <div class="contact-hero-panel">
+
+        <div class="contact-panel-line">
+          <span>Location</span>
+          <p>Cambridge, UK</p>
+        </div>
+
+        <div class="contact-panel-line">
+          <span>Working across</span>
+          <p>Residential and commercial projects across the UK</p>
+        </div>
+
+        <div class="contact-panel-line">
+          <span>Typical enquiries</span>
+          <p>Extensions, renovations, planning, building regulations and structural reports</p>
+        </div>
+
+      </div>
+
     </section>
+
+
+    <!-- ===== Contact Main ===== -->
+    <section class="contact-main-section">
+
+      <!-- Contact Methods -->
+      <div class="contact-methods">
+
+        <div class="contact-section-heading">
+          <p class="contact-eyebrow">Get in touch</p>
+          <h2>Contact details</h2>
+        </div>
+
+        <div class="contact-method-card">
+          <span>Email</span>
+          <a href="mailto:xuqiassociates@outlook.com">xuqiassociates@outlook.com</a>
+        </div>
+
+        <div class="contact-method-card">
+          <span>Phone</span>
+          <a href="tel:+447879286156">+44 7879 286156</a>
+        </div>
+
+        <div class="contact-method-card">
+          <span>WeChat</span>
+          <p>Gomm_1001</p>
+        </div>
+
+        <div class="contact-method-card">
+          <span>Rednote</span>
+          <p>26213729842</p>
+        </div>
+
+      </div>
+
+
+      <!-- Enquiry Guide -->
+      <div class="contact-enquiry-guide">
+
+        <div class="contact-section-heading">
+          <p class="contact-eyebrow">Before contacting us</p>
+          <h2>Helpful information to include</h2>
+        </div>
+
+        <div class="contact-guide-list">
+
+          <div class="contact-guide-item">
+            <span>01</span>
+            <div>
+              <h3>Property address</h3>
+              <p>
+                Share the location of the property so we can understand the project context.
+              </p>
+            </div>
+          </div>
+
+          <div class="contact-guide-item">
+            <span>02</span>
+            <div>
+              <h3>Project description</h3>
+              <p>
+                Briefly describe what you are planning, such as an extension, renovation,
+                wall removal or structural assessment.
+              </p>
+            </div>
+          </div>
+
+          <div class="contact-guide-item">
+            <span>03</span>
+            <div>
+              <h3>Existing information</h3>
+              <p>
+                Photos, estate agent plans, sketches, existing drawings or planning information
+                are useful if you already have them.
+              </p>
+            </div>
+          </div>
+
+          <div class="contact-guide-item">
+            <span>04</span>
+            <div>
+              <h3>Timescale</h3>
+              <p>
+                Let us know if there is a planning, building control, purchase or construction
+                deadline we should be aware of.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===== Services Contact Strip ===== -->
+    <section class="contact-service-strip">
+
+      <div class="contact-strip-heading">
+        <p class="contact-eyebrow">How we can help</p>
+        <h2>Support across design, planning and structure.</h2>
+      </div>
+
+      <div class="contact-strip-grid">
+
+        <a href="architectural-design.html" class="contact-strip-item">
+          <span>01</span>
+          <p>Architectural Design</p>
+        </a>
+
+        <a href="planning-applications.html" class="contact-strip-item">
+          <span>02</span>
+          <p>Planning Applications</p>
+        </a>
+
+        <a href="building-regulations.html" class="contact-strip-item">
+          <span>03</span>
+          <p>Building Regulations</p>
+        </a>
+
+        <a href="structural-engineering.html" class="contact-strip-item">
+          <span>04</span>
+          <p>Structural Engineering</p>
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===== CTA ===== -->
+    <section class="contact-cta-new">
+      <p class="contact-eyebrow">Start your project</p>
+      <h2>Ready to discuss your next step?</h2>
+      <p>
+        Send us your project details by email and we will help you understand what type
+        of architectural or structural support may be needed.
+      </p>
+
+      <a class="contact-cta-button" href="mailto:xuqiassociates@outlook.com?subject=Project%20Enquiry%20-%20XUQI%20Associates">Email us</a>
+    </section>
+
   </main>
 
-   <!-- ===== Footer ===== -->
-<footer class="site-footer">
 
-  <div class="footer-grid">
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
 
-    <!-- Studio -->
-    <div class="footer-col">
-      <h4>Studio</h4>
-      <p>XUQI Associates</p>
-      <p>Architectural and structural engineering studio</p>
-      <p>Residential and commercial work</p>
-      <p>Concept to completion</p>
+    <div class="footer-grid">
+
+      <!-- Studio -->
+      <div class="footer-col">
+        <h4>Studio</h4>
+        <p>XUQI Associates</p>
+        <p>Architectural and structural engineering studio</p>
+        <p>Residential and commercial work</p>
+        <p>Concept to completion</p>
+      </div>
+
+      <!-- Services -->
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="architectural-design.html">Architectural Design</a></li>
+          <li><a href="planning-applications.html">Planning Applications</a></li>
+          <li><a href="building-regulations.html">Building Regulations</a></li>
+          <li><a href="structural-engineering.html">Structural Engineering</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>Cambridge, UK</p>
+        <p>xuqiassociates@outlook.com</p>
+        <p>+44 7879 286156</p>
+      </div>
+
+      <!-- Legal -->
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms & Conditions</a></li>
+        </ul>
+      </div>
+
     </div>
 
-    <!-- Services -->
-    <div class="footer-col">
-      <h4>Services</h4>
-      <ul>
-        <li>Architectural Design</li>
-        <li>Planning Applications</li>
-        <li>Building Regulations</li>
-        <li>Structural Engineering</li>
-      </ul>
+    <div class="footer-bottom">
+      <div class="footer-logo-wrap">
+        <img class="footer-logo" src="assets/Logo.png" alt="XUQI Associates Logo">
+      </div>
+
+      <p>© <span id="year"></span> XUQI Associates. All rights reserved.</p>
     </div>
 
-    <!-- Contact -->
-    <div class="footer-col">
-      <h4>Contact</h4>
-      <p>Cambridge, UK</p>
-      <p>xuqiassociates@outlook.com</p>
-    </div>
+  </footer>
 
-    <!-- Legal -->
-    <div class="footer-col">
-      <h4>Legal</h4>
-      <ul>
-      <li><a href="privacy.html">Privacy Policy</a></li>
-<li><a href="terms.html">Terms & Conditions</a></li>
-      </ul>
-    </div>
 
-  </div>
-
-  <div class="footer-bottom">
-    <div class="footer-logo">
-     <img class="footer-logo" src="assets/Logo.png" alt="XUQI Associates Logo">
-    </div>
-
-    <p>© <span id="year"></span> XUQI Associates. All rights reserved.</p>
-  </div>
-
-</footer>
-
-  <!-- JS -->
+  <!-- ===== Scripts ===== -->
   <script>
     const menuToggle = document.querySelector('.menu-toggle');
     const siteNav = document.querySelector('.site-nav');
 
     if (menuToggle && siteNav) {
-      // 点击汉堡按钮：切换导航
       menuToggle.addEventListener('click', (e) => {
         siteNav.classList.toggle('active');
         menuToggle.classList.toggle('active');
         e.stopPropagation();
       });
 
-      // 点击导航链接：自动收起
       siteNav.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => {
           siteNav.classList.remove('active');
@@ -203,19 +302,23 @@ main {
         });
       });
 
-      // 点击页面其他地方：收起导航
       document.addEventListener('click', (e) => {
-        if (siteNav.classList.contains('active') &&
-            !siteNav.contains(e.target) &&
-            !menuToggle.contains(e.target)) {
+        if (
+          siteNav.classList.contains('active') &&
+          !siteNav.contains(e.target) &&
+          !menuToggle.contains(e.target)
+        ) {
           siteNav.classList.remove('active');
           menuToggle.classList.remove('active');
         }
       });
     }
 
-    // 年份显示
-    document.getElementById('year').textContent = new Date().getFullYear();
+    const year = document.getElementById('year');
+    if (year) {
+      year.textContent = new Date().getFullYear();
+    }
   </script>
+
 </body>
 </html>
