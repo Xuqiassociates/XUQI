@@ -2163,6 +2163,480 @@ button, .btn {
   }
 }
 
+/* ==============================
+   Structural Engineering Page - Compact Creative Layout
+============================== */
+
+.se-creative-page {
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+/* ===== Compact Intro ===== */
+
+.se-compact-hero {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 7rem 4rem 5rem;
+  display: grid;
+  grid-template-columns: 0.7fr 1.1fr 0.9fr;
+  gap: 4rem;
+  align-items: start;
+  background: #f8fafc;
+}
+
+.se-compact-title {
+  border-top: 1px solid #cbd5e1;
+  padding-top: 1.4rem;
+}
+
+.se-compact-title h1 {
+  margin: 0;
+  font-size: 1.6rem;
+  line-height: 1.15;
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  color: #0f172a;
+}
+
+.se-eyebrow {
+  margin: 0 0 1.2rem;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #64748b;
+}
+
+.se-compact-intro {
+  border-top: 1px solid #cbd5e1;
+  padding-top: 1.4rem;
+}
+
+.se-compact-intro p {
+  max-width: 620px;
+  margin: 0;
+  font-size: clamp(1.4rem, 2.6vw, 2.4rem);
+  line-height: 1.18;
+  letter-spacing: -0.04em;
+  font-weight: 300;
+  color: #1e293b;
+}
+
+.se-compact-index {
+  border-top: 1px solid #cbd5e1;
+  border-bottom: 1px solid #cbd5e1;
+}
+
+.se-compact-index div {
+  display: grid;
+  grid-template-columns: 42px 1fr;
+  gap: 1.2rem;
+  padding: 1.15rem 0;
+  border-bottom: 1px solid #cbd5e1;
+}
+
+.se-compact-index div:last-child {
+  border-bottom: none;
+}
+
+.se-compact-index span {
+  font-size: 0.76rem;
+  color: #94a3b8;
+}
+
+.se-compact-index p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: #334155;
+  font-weight: 300;
+}
+
+/* ===== Statement ===== */
+
+.se-creative-statement {
+  background: #eef3f7;
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.se-creative-statement p {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 5rem 4rem;
+  font-size: clamp(1.8rem, 3.5vw, 3.4rem);
+  line-height: 1.15;
+  letter-spacing: -0.045em;
+  font-weight: 400;
+  color: #1e293b;
+}
+
+/* ===== Layered Expertise ===== */
+
+.se-layered-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 7rem 4rem;
+}
+
+.se-layered-heading {
+  max-width: 760px;
+  margin-bottom: 3.5rem;
+}
+
+.se-layered-heading h2,
+.se-report-text h2,
+.se-deliverables-heading h2,
+.se-process-heading h2,
+.se-creative-cta h2 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3.6rem);
+  line-height: 1.05;
+  letter-spacing: -0.05em;
+  font-weight: 300;
+  color: #0f172a;
+}
+
+.se-layered-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 1.2rem;
+}
+
+.se-layer-card {
+  background: #ffffff;
+  border: 1px solid #d8e0e6;
+  padding: 2.5rem;
+  min-height: 280px;
+}
+
+.se-layer-card.large {
+  grid-row: span 2;
+  min-height: 580px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: #526D82;
+}
+
+.se-layer-card.wide {
+  grid-column: 1 / -1;
+  min-height: 260px;
+}
+
+.se-layer-card span {
+  display: block;
+  margin-bottom: 2rem;
+  color: #94a3b8;
+  font-size: 0.85rem;
+}
+
+.se-layer-card h3 {
+  margin: 0 0 1rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  color: #0f172a;
+}
+
+.se-layer-card p {
+  margin: 0;
+  color: #64748b;
+  line-height: 1.75;
+  font-size: 0.96rem;
+}
+
+.se-layer-card.large span,
+.se-layer-card.large h3 {
+  color: #ffffff;
+}
+
+.se-layer-card.large p {
+  color: rgba(255,255,255,0.76);
+}
+
+/* ===== Report Feature ===== */
+
+.se-report-feature {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 4rem 7rem;
+  display: grid;
+  grid-template-columns: 0.45fr 1.05fr 0.8fr;
+  gap: 1.2rem;
+}
+
+.se-report-number {
+  background: #ffffff;
+  border: 1px solid #d8e0e6;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.se-report-number span {
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #64748b;
+}
+
+.se-report-number strong {
+  font-size: clamp(5rem, 10vw, 9rem);
+  line-height: 0.8;
+  font-weight: 500;
+  color: #526D82;
+}
+
+.se-report-text {
+  background: #eef3f7;
+  border: 1px solid #d8e0e6;
+  padding: 3rem;
+}
+
+.se-report-text > p:not(.section-label) {
+  margin: 1.6rem 0 0;
+  font-size: 1rem;
+  line-height: 1.85;
+  color: #475569;
+}
+
+.se-report-list {
+  display: grid;
+  gap: 1px;
+}
+
+.se-report-list div {
+  background: #ffffff;
+  border: 1px solid #d8e0e6;
+  padding: 1.4rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #526D82;
+}
+
+/* ===== Deliverables ===== */
+
+.se-deliverables-creative {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 4rem 7rem;
+}
+
+.se-deliverables-heading {
+  max-width: 760px;
+  margin-bottom: 3rem;
+}
+
+.se-deliverables-list {
+  border-top: 1px solid #d8e0e6;
+}
+
+.se-deliverable-line {
+  display: grid;
+  grid-template-columns: 120px 0.8fr 1.2fr;
+  gap: 3rem;
+  padding: 2rem 0;
+  border-bottom: 1px solid #d8e0e6;
+}
+
+.se-deliverable-line span {
+  color: #94a3b8;
+  font-size: 0.85rem;
+}
+
+.se-deliverable-line h3 {
+  margin: 0;
+  font-size: 1.35rem;
+  font-weight: 400;
+  color: #0f172a;
+}
+
+.se-deliverable-line p {
+  margin: 0;
+  color: #64748b;
+  line-height: 1.75;
+}
+
+/* ===== Process ===== */
+
+.se-process-creative {
+  background: #526D82;
+  color: #ffffff;
+  padding: 7rem 4rem;
+}
+
+.se-process-heading {
+  max-width: 1200px;
+  margin: 0 auto 4rem;
+}
+
+.se-process-creative .section-label {
+  color: rgba(255,255,255,0.7);
+}
+
+.se-process-heading h2 {
+  color: #ffffff;
+}
+
+.se-process-list {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  gap: 0;
+  border-top: 1px solid rgba(255,255,255,0.16);
+}
+
+.se-process-item {
+  display: grid;
+  grid-template-columns: 160px 1fr 1.4fr;
+  gap: 3rem;
+  padding: 2rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.16);
+}
+
+.se-process-item span {
+  color: rgba(255,255,255,0.58);
+  font-size: 0.85rem;
+}
+
+.se-process-item h3 {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: #ffffff;
+}
+
+.se-process-item p {
+  margin: 0;
+  color: rgba(255,255,255,0.72);
+  line-height: 1.75;
+}
+
+/* ===== CTA ===== */
+
+.se-creative-cta {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 8rem 4rem;
+  text-align: center;
+}
+
+.se-creative-cta p {
+  max-width: 680px;
+  margin: 1.5rem auto 2.5rem;
+  color: #64748b;
+  line-height: 1.8;
+}
+
+.se-cta-button {
+  display: inline-block;
+  padding: 0.95rem 1.8rem;
+  border: 1px solid #526D82;
+  color: #526D82;
+  text-decoration: none;
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+  transition: all 0.3s ease;
+}
+
+.se-cta-button:hover {
+  background: #526D82;
+  color: #ffffff;
+}
+
+/* ===== Mobile ===== */
+
+@media (max-width: 900px) {
+  .se-compact-hero {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding: 5rem 2rem 4rem;
+  }
+
+  .se-compact-intro p {
+    font-size: 1.7rem;
+  }
+
+  .se-creative-statement p,
+  .se-layered-section,
+  .se-report-feature,
+  .se-deliverables-creative,
+  .se-creative-cta {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .se-layered-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .se-layer-card.large {
+    min-height: 360px;
+  }
+
+  .se-layer-card.wide {
+    grid-column: auto;
+  }
+
+  .se-report-feature {
+    grid-template-columns: 1fr;
+  }
+
+  .se-report-number {
+    min-height: 260px;
+  }
+
+  .se-deliverable-line {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .se-process-creative {
+    padding: 5rem 2rem;
+  }
+
+  .se-process-item {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .se-compact-hero,
+  .se-creative-statement p,
+  .se-layered-section,
+  .se-report-feature,
+  .se-deliverables-creative,
+  .se-creative-cta {
+    padding-left: 1.4rem;
+    padding-right: 1.4rem;
+  }
+
+  .se-compact-title h1 {
+    font-size: 1.4rem;
+  }
+
+  .se-compact-intro p {
+    font-size: 1.45rem;
+  }
+
+  .se-compact-index div {
+    grid-template-columns: 36px 1fr;
+  }
+
+  .se-creative-statement p {
+    font-size: 1.7rem;
+  }
+
+  .se-layer-card,
+  .se-report-text {
+    padding: 1.6rem;
+  }
+}
 
 /* ===== Footer Base ===== */
 .site-footer {
