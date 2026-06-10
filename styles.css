@@ -1207,6 +1207,330 @@ button, .btn {
   }
 }
 
+/* ==============================
+   Architectural Design Page
+============================== */
+
+.arch-page {
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+/* ===== Hero ===== */
+
+.arch-hero {
+  position: relative;
+  min-height: 78vh;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  background: #526D82;
+}
+
+.arch-hero-image {
+  position: absolute;
+  inset: 0;
+  background-image: url("assets/architectural-design-banner.webp");
+  background-size: cover;
+  background-position: center;
+  transform: scale(1.02);
+}
+
+.arch-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(82, 109, 130, 0.72),
+    rgba(82, 109, 130, 0.18)
+  );
+}
+
+.arch-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 980px;
+  padding: 0 4rem 6rem;
+  color: #ffffff;
+}
+
+.arch-eyebrow {
+  margin: 0 0 1rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.76);
+  font-weight: 500;
+}
+
+.arch-hero-content h1 {
+  margin: 0 0 1.5rem;
+  font-size: clamp(2.6rem, 6vw, 5.8rem);
+  line-height: 0.95;
+  letter-spacing: -0.06em;
+  font-weight: 300;
+  color: #ffffff;
+}
+
+.arch-hero-content p {
+  max-width: 680px;
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.82);
+}
+
+/* ===== Intro ===== */
+
+.arch-intro {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 7rem 4rem 5rem;
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 5rem;
+}
+
+.arch-intro h2,
+.arch-process-heading h2,
+.arch-types-content h2,
+.arch-cta h2 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3.6rem);
+  line-height: 1.05;
+  letter-spacing: -0.05em;
+  font-weight: 300;
+  color: #0f172a;
+}
+
+.arch-intro-copy p {
+  margin: 0 0 1.4rem;
+  font-size: 1rem;
+  line-height: 1.85;
+  color: #475569;
+}
+
+/* ===== Services Cards ===== */
+
+.arch-services {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 4rem 7rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+}
+
+.arch-card {
+  background: #ffffff;
+  padding: 2.5rem 2rem;
+  min-height: 260px;
+  border: 1px solid #e2e8f0;
+}
+
+.arch-card span {
+  display: block;
+  margin-bottom: 2rem;
+  color: #94a3b8;
+  font-size: 0.85rem;
+}
+
+.arch-card h3 {
+  margin: 0 0 1rem;
+  font-size: 1.25rem;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  color: #0f172a;
+}
+
+.arch-card p {
+  margin: 0;
+  color: #64748b;
+  line-height: 1.75;
+  font-size: 0.95rem;
+}
+
+/* ===== Process ===== */
+
+.arch-process {
+  background: #526D82;
+  color: #ffffff;
+  padding: 7rem 4rem;
+}
+
+.arch-process-heading {
+  max-width: 1200px;
+  margin: 0 auto 4rem;
+}
+
+.arch-process .section-label {
+  color: rgba(255,255,255,0.7);
+}
+
+.arch-process-heading h2 {
+  color: #ffffff;
+}
+
+.arch-process-list {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  gap: 0;
+  border-top: 1px solid rgba(255,255,255,0.16);
+}
+
+.arch-process-item {
+  display: grid;
+  grid-template-columns: 160px 1fr 1.4fr;
+  gap: 3rem;
+  padding: 2rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.16);
+}
+
+.arch-process-item span {
+  color: rgba(255,255,255,0.58);
+  font-size: 0.85rem;
+}
+
+.arch-process-item h3 {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: #ffffff;
+}
+
+.arch-process-item p {
+  margin: 0;
+  color: rgba(255,255,255,0.72);
+  line-height: 1.75;
+}
+
+/* ===== Types ===== */
+
+.arch-types {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 640px;
+  background: #ffffff;
+}
+
+.arch-types-image {
+  background-image: url("assets/architectural-design-detail.webp");
+  background-size: cover;
+  background-position: center;
+}
+
+.arch-types-content {
+  padding: 7rem 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.arch-types-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 3rem 0 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem 2rem;
+}
+
+.arch-types-content li {
+  padding-bottom: 0.85rem;
+  border-bottom: 1px solid #e2e8f0;
+  color: #475569;
+}
+
+/* ===== CTA ===== */
+
+.arch-cta {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 8rem 4rem;
+  text-align: center;
+}
+
+.arch-cta p {
+  max-width: 680px;
+  margin: 1.5rem auto 2.5rem;
+  color: #64748b;
+  line-height: 1.8;
+}
+
+.arch-cta-button {
+  display: inline-block;
+  padding: 0.95rem 1.8rem;
+  border: 1px solid #526D82;
+  color: #526D82;
+  text-decoration: none;
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+  transition: all 0.3s ease;
+}
+
+.arch-cta-button:hover {
+  background: #526D82;
+  color: #ffffff;
+}
+
+/* ===== Mobile ===== */
+
+@media (max-width: 900px) {
+  .arch-hero {
+    min-height: 72vh;
+  }
+
+  .arch-hero-content {
+    padding: 0 1.5rem 4rem;
+  }
+
+  .arch-intro {
+    grid-template-columns: 1fr;
+    padding: 5rem 1.5rem 3rem;
+    gap: 2rem;
+  }
+
+  .arch-services {
+    grid-template-columns: 1fr;
+    padding: 0 1.5rem 5rem;
+  }
+
+  .arch-card {
+    min-height: auto;
+  }
+
+  .arch-process {
+    padding: 5rem 1.5rem;
+  }
+
+  .arch-process-item {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .arch-types {
+    grid-template-columns: 1fr;
+  }
+
+  .arch-types-image {
+    min-height: 360px;
+  }
+
+  .arch-types-content {
+    padding: 4rem 1.5rem;
+  }
+
+  .arch-types-content ul {
+    grid-template-columns: 1fr;
+  }
+
+  .arch-cta {
+    padding: 5rem 1.5rem;
+  }
+}
+
 /* ===== Footer Base ===== */
 .site-footer {
   background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
