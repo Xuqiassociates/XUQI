@@ -1,229 +1,437 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-  <title>Services - XUQI Associates</title>
-  <meta name="description" content="Architectural Design & Structural Engineering Services">
+  <title>Services | XUQI Associates</title>
+  <meta name="description" content="Architectural design, planning applications, building regulations and structural engineering services across the UK." />
 
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css" />
 
-  <!-- Favicon -->
-<link rel="icon" href="assets/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
-<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
-<link rel="manifest" href="assets/site.webmanifest">
+  <!-- Tab Logo / Favicon -->
+  <link rel="icon" href="assets/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+  <link rel="manifest" href="assets/site.webmanifest">
 </head>
 
 <body>
 
-<!-- ================= HEADER ================= -->
-<header class="site-header">
-  <div class="container header-inner">
+  <!-- ===== Header ===== -->
+  <header class="site-header">
+    <div class="container header-inner">
 
-    <div class="header-left">
-      <a href="index.html">
-        <img src="assets/Logo.png" alt="XUQI Associates Logo" class="logo">
-      </a>
-    </div>
+      <div class="header-left">
+        <a href="index.html">
+          <img src="assets/Logo.png" alt="XUQI Associates Logo" class="logo">
+        </a>
+      </div>
 
-    <button class="menu-toggle" aria-label="Toggle navigation">
-      &#9776;
-    </button>
+      <button class="menu-toggle" aria-label="Toggle navigation">
+        &#9776;
+      </button>
 
-   <nav class="site-nav">
+      <nav class="site-nav">
         <a href="home.html">Home</a>
         <a href="Intro.html">About</a>
         <a href="projects.html">Projects</a>
-        <a href="services.html">Services</a>
+        <a href="services.html" class="active">Services</a>
         <a href="contact.html">Contact</a>
       </nav>
+
     </div>
   </header>
 
 
-<!-- ================= HERO ================= -->
-<section class="services-hero">
-  <h1>Our Services</h1>
-  <p>Architectural Design & Structural Engineering Solutions across the UK</p>
-</section>
+  <!-- ===== Services Page ===== -->
+  <main class="services-page-new">
 
-<!-- SERVICES (EDITORIAL SEQUENCE) -->
+    <!-- ===== Services Hero ===== -->
+    <section class="services-hero-new">
 
-<section class="services-grid">
+      <div class="services-hero-text">
+        <p class="services-eyebrow">Services</p>
 
-  <!-- 1 -->
-  <a class="service-card" href="#">
-    <div class="service-image">
-      <img src="assets/service1.jpg" alt="Pre-Construction Services">
+        <h1>
+          Support shaped around your project stage.
+        </h1>
+
+        <p>
+          We provide architectural and structural support for residential and commercial
+          projects, from early design ideas and planning applications through to technical
+          drawings, building regulations and structural engineering input.
+        </p>
+      </div>
+
+      <div class="services-hero-panel">
+
+        <div class="services-panel-line">
+          <span>01</span>
+          <p>Architectural design for extensions, renovations and new spatial layouts</p>
+        </div>
+
+        <div class="services-panel-line">
+          <span>02</span>
+          <p>Planning drawings and supporting information for applications</p>
+        </div>
+
+        <div class="services-panel-line">
+          <span>03</span>
+          <p>Building regulations drawings and coordinated technical packages</p>
+        </div>
+
+        <div class="services-panel-line">
+          <span>04</span>
+          <p>Structural calculations, reports and engineering design support</p>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===== Statement ===== -->
+    <section class="services-statement">
+      <p>
+        Clear drawings, practical technical advice and coordinated structural input
+        help each project move from uncertainty towards a defined route forward.
+      </p>
+    </section>
+
+
+    <!-- ===== Services Overview ===== -->
+    <section class="services-overview-section">
+
+      <div class="services-heading">
+        <p class="services-eyebrow">How we can help</p>
+        <h2>Core services</h2>
+      </div>
+
+      <div class="services-overview-grid">
+
+        <!-- 01 -->
+        <a href="architectural-design.html" class="service-overview-card">
+
+          <div class="service-overview-image">
+            <img src="assets/service1.jpg" alt="Architectural design service">
+          </div>
+
+          <div class="service-overview-content">
+            <span>01</span>
+
+            <p class="service-category">Design</p>
+
+            <h3>Architectural Design</h3>
+
+            <p>
+              Calm, considered design proposals for extensions, renovations and spatial
+              improvements, balancing everyday use with planning and construction requirements.
+            </p>
+
+            <div class="service-tags">
+              <span>Extensions</span>
+              <span>Renovations</span>
+              <span>Layouts</span>
+            </div>
+          </div>
+
+        </a>
+
+
+        <!-- 02 -->
+        <a href="planning-applications.html" class="service-overview-card">
+
+          <div class="service-overview-image">
+            <img src="assets/service2.jpg" alt="Planning application drawings">
+          </div>
+
+          <div class="service-overview-content">
+            <span>02</span>
+
+            <p class="service-category">Planning</p>
+
+            <h3>Planning Applications</h3>
+
+            <p>
+              Planning drawings and supporting information prepared to communicate your proposal
+              clearly in relation to site context, local policy and project requirements.
+            </p>
+
+            <div class="service-tags">
+              <span>Planning drawings</span>
+              <span>Applications</span>
+              <span>Context</span>
+            </div>
+          </div>
+
+        </a>
+
+
+        <!-- 03 -->
+        <a href="building-regulations.html" class="service-overview-card">
+
+          <div class="service-overview-image">
+            <img src="assets/service3.jpg" alt="Building regulations and technical drawings">
+          </div>
+
+          <div class="service-overview-content">
+            <span>03</span>
+
+            <p class="service-category">Technical</p>
+
+            <h3>Building Regulations</h3>
+
+            <p>
+              Technical drawings and coordinated information to support building control,
+              construction preparation and communication between client, contractor and consultants.
+            </p>
+
+            <div class="service-tags">
+              <span>Technical drawings</span>
+              <span>Building control</span>
+              <span>Coordination</span>
+            </div>
+          </div>
+
+        </a>
+
+
+        <!-- 04 -->
+        <a href="structural-engineering.html" class="service-overview-card">
+
+          <div class="service-overview-image">
+            <img src="assets/service4.jpg" alt="Structural engineering calculations and reports">
+          </div>
+
+          <div class="service-overview-content">
+            <span>04</span>
+
+            <p class="service-category">Structure</p>
+
+            <h3>Structural Engineering</h3>
+
+            <p>
+              Structural calculations, steel beam design, wall removal advice, foundation support
+              and structural reports for residential and commercial projects.
+            </p>
+
+            <div class="service-tags">
+              <span>Calculations</span>
+              <span>Reports</span>
+              <span>Steel design</span>
+            </div>
+          </div>
+
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===== Process Strip ===== -->
+    <section class="services-process-section">
+
+      <div class="services-process-heading">
+        <p class="services-eyebrow">Working process</p>
+        <h2>A clear route from enquiry to deliverables.</h2>
+      </div>
+
+      <div class="services-process-list">
+
+        <div class="services-process-item">
+          <span>01</span>
+          <h3>Initial conversation</h3>
+          <p>
+            We start by understanding your property, project stage, goals and any immediate
+            planning, purchase or construction deadlines.
+          </p>
+        </div>
+
+        <div class="services-process-item">
+          <span>02</span>
+          <h3>Scope and quotation</h3>
+          <p>
+            We confirm what type of architectural or structural support is required and define
+            the scope of drawings, calculations, reports or application work.
+          </p>
+        </div>
+
+        <div class="services-process-item">
+          <span>03</span>
+          <h3>Drawings and technical work</h3>
+          <p>
+            We prepare the agreed design, planning, building regulations or structural information
+            in a coordinated and practical format.
+          </p>
+        </div>
+
+        <div class="services-process-item">
+          <span>04</span>
+          <h3>Submission and support</h3>
+          <p>
+            Where required, we support the project through planning, building control or technical
+            coordination with contractors and other appointed professionals.
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===== Additional Support ===== -->
+    <section class="services-support-section">
+
+      <div class="services-support-heading">
+        <p class="services-eyebrow">Project types</p>
+        <h2>Support for homes, commercial spaces and property decisions.</h2>
+      </div>
+
+      <div class="services-support-grid">
+
+        <div class="services-support-card">
+          <span>Residential</span>
+          <h3>Homes and extensions</h3>
+          <p>
+            Extensions, loft conversions, internal alterations, wall removals, renovation layouts
+            and technical packages for domestic projects.
+          </p>
+        </div>
+
+        <div class="services-support-card">
+          <span>Commercial</span>
+          <h3>Small commercial projects</h3>
+          <p>
+            Practical design and technical support for commercial alterations, fit-out works,
+            structural checks and building regulation requirements.
+          </p>
+        </div>
+
+        <div class="services-support-card">
+          <span>Reports</span>
+          <h3>Structural inspections</h3>
+          <p>
+            Structural surveys and reports for cracking, movement, damage, defects, property
+            purchase concerns and insurance-related enquiries.
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===== CTA ===== -->
+    <section class="services-cta-new">
+      <p class="services-eyebrow">Start your project</p>
+
+      <h2>Not sure what service you need?</h2>
+
+      <p>
+        Send us your project details, property address and any drawings or photos you already have.
+        We can help identify the right architectural or structural route forward.
+      </p>
+
+      <a class="services-cta-button" href="contact.html">Contact us</a>
+    </section>
+
+  </main>
+
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+
+    <div class="footer-grid">
+
+      <!-- Studio -->
+      <div class="footer-col">
+        <h4>Studio</h4>
+        <p>XUQI Associates</p>
+        <p>Architectural and structural engineering studio</p>
+        <p>Residential and commercial work</p>
+        <p>Concept to completion</p>
+      </div>
+
+      <!-- Services -->
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="architectural-design.html">Architectural Design</a></li>
+          <li><a href="planning-applications.html">Planning Applications</a></li>
+          <li><a href="building-regulations.html">Building Regulations</a></li>
+          <li><a href="structural-engineering.html">Structural Engineering</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>Cambridge, UK</p>
+        <p>xuqiassociates@outlook.com</p>
+        <p>+44 7879 286156</p>
+      </div>
+
+      <!-- Legal -->
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms & Conditions</a></li>
+        </ul>
+      </div>
+
     </div>
 
-    <div class="service-content">
-      <h3>Pre-Construction Services</h3>
-      <ul>
-        <li>Measured Surveys</li>
-        <li>Planning Drawings</li>
-        <li>Building Regulations</li>
-      </ul>
+    <div class="footer-bottom">
+      <div class="footer-logo-wrap">
+        <img class="footer-logo" src="assets/Logo.png" alt="XUQI Associates Logo">
+      </div>
+
+      <p>© <span id="year"></span> XUQI Associates. All rights reserved.</p>
     </div>
 
-    <div class="service-overlay">
-      Early-stage surveys, planning applications and technical drawings
-    </div>
-  </a>
+  </footer>
 
 
-  <!-- 2 -->
-  <a class="service-card" href="#">
-    <div class="service-image">
-      <img src="assets/service2.jpg" alt="Architectural Design">
-    </div>
+  <!-- ===== Scripts ===== -->
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const siteNav = document.querySelector('.site-nav');
 
-    <div class="service-content">
-      <h3>Architectural Design</h3>
-      <ul>
-        <li>House Extensions</li>
-        <li>Loft Conversions</li>
-        <li>Interior Layout Design</li>
-      </ul>
-    </div>
+    if (menuToggle && siteNav) {
+      menuToggle.addEventListener('click', (e) => {
+        siteNav.classList.toggle('active');
+        menuToggle.classList.toggle('active');
+        e.stopPropagation();
+      });
 
-    <div class="service-overlay">
-      Space planning and architectural transformation design solutions
-    </div>
-  </a>
+      siteNav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          siteNav.classList.remove('active');
+          menuToggle.classList.remove('active');
+        });
+      });
 
+      document.addEventListener('click', (e) => {
+        if (
+          siteNav.classList.contains('active') &&
+          !siteNav.contains(e.target) &&
+          !menuToggle.contains(e.target)
+        ) {
+          siteNav.classList.remove('active');
+          menuToggle.classList.remove('active');
+        }
+      });
+    }
 
-  <!-- 3 -->
-  <a class="service-card" href="#">
-    <div class="service-image">
-      <img src="assets/service3.jpg" alt="Structural Engineering">
-    </div>
-
-    <div class="service-content">
-      <h3>Structural Engineering</h3>
-      <ul>
-        <li>Steel Beam Design</li>
-        <li>Load Bearing Walls</li>
-        <li>Structural Calculations</li>
-      </ul>
-    </div>
-
-    <div class="service-overlay">
-      Safe structural design solutions for residential and commercial projects
-    </div>
-  </a>
-
-
-  <!-- 4 -->
-  <a class="service-card" href="#">
-    <div class="service-image">
-      <img src="assets/service4.jpg" alt="Inspections & Reports">
-    </div>
-
-    <div class="service-content">
-      <h3>Inspections & Reports</h3>
-      <ul>
-        <li>Structural Surveys</li>
-        <li>Subsidence Investigation</li>
-        <li>Damage Assessment</li>
-      </ul>
-    </div>
-
-    <div class="service-overlay">
-      Structural inspections and detailed defect analysis reports
-    </div>
-  </a>
-
-
-  <!-- 5 -->
-  <a class="service-card" href="#">
-    <div class="service-image">
-      <img src="assets/service5.jpg" alt="Foundations & Engineering">
-    </div>
-
-    <div class="service-content">
-      <h3>Foundations & Engineering</h3>
-      <ul>
-        <li>Pile Foundations</li>
-        <li>Raft Foundations</li>
-        <li>Ground Engineering</li>
-      </ul>
-    </div>
-
-    <div class="service-overlay">
-      Foundation design and geotechnical engineering solutions
-    </div>
-  </a>
-
-</section>
-
- <!-- ===== Footer ===== -->
-<footer class="site-footer">
-
-  <div class="footer-grid">
-
-    <!-- Studio -->
-    <div class="footer-col">
-      <h4>Studio</h4>
-      <p>XUQI Associates</p>
-      <p>Architectural and structural engineering studio</p>
-      <p>Residential and commercial work</p>
-      <p>Concept to completion</p>
-    </div>
-
-    <!-- Services -->
-    <div class="footer-col">
-      <h4>Services</h4>
-     <ul>
-    <li><a href="architectural-design.html">Architectural Design</a></li>
-    <li><a href="planning-applications.html">Planning Applications</a></li>
-    <li><a href="building-regulations.html">Building Regulations</a></li>
-    <li><a href="structural-engineering.html">Structural Engineering</a></li>
-  </ul>
-    </div>
-
-    <!-- Contact -->
-    <div class="footer-col">
-      <h4>Contact</h4>
-      <p>Cambridge, UK</p>
-      <p>xuqiassociates@outlook.com</p>
-      <p>+44 07879286156</p>
-    </div>
-
-    <!-- Legal -->
-    <div class="footer-col">
-      <h4>Legal</h4>
-      <ul>
-      <li><a href="privacy.html">Privacy Policy</a></li>
-<li><a href="terms.html">Terms & Conditions</a></li>
-      </ul>
-    </div>
-
-  </div>
-
-  <div class="footer-bottom">
-    <div class="footer-logo">
-     <img class="footer-logo" src="assets/Logo.png" alt="XUQI Associates Logo">
-    </div>
-
-    <p>© <span id="year"></span> XUQI Associates. All rights reserved.</p>
-  </div>
-
-</footer>
-
-<!-- ================= MOBILE MENU ================= -->
-<script>
-  const toggleBtn = document.querySelector('.menu-toggle');
-  const nav = document.querySelector('.site-nav');
-
-  toggleBtn.addEventListener('click', () => {
-    nav.classList.toggle('active');
-    toggleBtn.classList.toggle('active');
-  });
-</script>
+    const year = document.getElementById('year');
+    if (year) {
+      year.textContent = new Date().getFullYear();
+    }
+  </script>
 
 </body>
 </html>
